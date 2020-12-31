@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 350 350" xmlns="http://www.w3.org/2000/svg">
+ <ellipse cx="177.5" cy="174.57" rx="151.5" ry="161.57" fill="#fff" stroke="#000" stroke-width="5"/>
+ <rect x="93" y="45" width="170" height="260" fill="#fff"/>
+ <path d="m148.5 85.5h-20c-2.761 0-5-2.239-5-5v-20c0-2.761 2.239-5 5-5h20c2.761 0 5 2.239 5 5v20c0 2.761-2.239 5-5 5z" fill-rule="evenodd"/>
+ <path d="m148.5 85.5h-20c-2.761 0-5-2.239-5-5v-20c0-2.761 2.239-5 5-5h20c2.761 0 5 2.239 5 5v20c0 2.761-2.239 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m188.5 85.5h-20c-2.761 0-5-2.239-5-5v-20c0-2.761 2.239-5 5-5h20c2.762 0 5 2.239 5 5v20c0 2.761-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m188.5 85.5h-20c-2.761 0-5-2.239-5-5v-20c0-2.761 2.239-5 5-5h20c2.762 0 5 2.239 5 5v20c0 2.761-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m228.5 85.5h-20c-2.762 0-5-2.239-5-5v-20c0-2.761 2.238-5 5-5h20c2.762 0 5 2.239 5 5v20c0 2.761-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m228.5 85.5h-20c-2.762 0-5-2.239-5-5v-20c0-2.761 2.238-5 5-5h20c2.762 0 5 2.239 5 5v20c0 2.761-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m248.5 295.5h-140c-2.761 0-5-2.238-5-5v-10c0-2.762 2.239-5 5-5h140c2.762 0 5 2.238 5 5v10c0 2.762-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m248.5 295.5h-140c-2.761 0-5-2.238-5-5v-10c0-2.762 2.239-5 5-5h140c2.762 0 5 2.238 5 5v10c0 2.762-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m238.5 275.5h-120c-2.761 0-5-2.238-5-5v-20c0-2.762 2.239-5 5-5h120c2.762 0 5 2.238 5 5v20c0 2.762-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m238.5 275.5h-120c-2.761 0-5-2.238-5-5v-20c0-2.762 2.239-5 5-5h120c2.762 0 5 2.238 5 5v20c0 2.762-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m228.5 245.5h-100c-2.761 0-5-2.238-5-5s2.239-5 5-5h100c2.762 0 5 2.238 5 5s-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m228.5 245.5h-100c-2.761 0-5-2.238-5-5s2.239-5 5-5h100c2.762 0 5 2.238 5 5s-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m228.5 135.5h-100c-2.761 0-5-2.239-5-5v-10c0-2.761 2.239-5 5-5h100c2.762 0 5 2.239 5 5v10c0 2.761-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m228.5 135.5h-100c-2.761 0-5-2.239-5-5v-10c0-2.761 2.239-5 5-5h100c2.762 0 5 2.239 5 5v10c0 2.761-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m217.88 245.5h-80c-2.761 0-4.72-2.238-4.375-5l13.75-110c0.345-2.761 2.864-5 5.625-5h50c2.762 0 5.28 2.239 5.625 5l13.75 110c0.345 2.762-1.613 5-4.375 5z" fill-rule="evenodd"/>
+ <path d="m217.88 245.5h-80c-2.761 0-4.72-2.238-4.375-5l13.75-110c0.345-2.761 2.864-5 5.625-5h50c2.762 0 5.28 2.239 5.625 5l13.75 110c0.345 2.762-1.613 5-4.375 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+ <path d="m228.5 115.5h-100c-2.761 0-5-2.239-5-5v-30c0-2.761 2.239-5 5-5h100c2.762 0 5 2.239 5 5v30c0 2.761-2.238 5-5 5z" fill-rule="evenodd"/>
+ <path d="m228.5 115.5h-100c-2.761 0-5-2.239-5-5v-30c0-2.761 2.239-5 5-5h100c2.762 0 5 2.239 5 5v30c0 2.761-2.238 5-5 5z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1"/>
+</svg>

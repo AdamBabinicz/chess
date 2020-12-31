@@ -1,43 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/rock.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="DESCRIPTION"
+      content="Szachy - moje hobby. Najpiękniejsza i jedna z najstarszych gier cywilizacji ludzkiej."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta
+      name="Szachy w Radomiu. Turnieje, rozgrywki, memoriały."
+      content="index, follow"
+    />
+    <meta name="handheldFriendly" content="true" />
+    <meta
+      property="og:image"
+      content="https://wiktor-chess.netlify.app/para.svg"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Propagowanie idei sportowej rywalizacji na szachownicy"
+    />
+    <meta property="og:url" content="https://wiktor-chess.netlify.app" />
+    <meta
+      property="og:description"
+      content="Portfolio radomskiego szachisty."
+    />
+    <meta
+      property="og:image"
+      content="https://wiktor-chess.netlify.app/chess.svg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="https://twitter.com/holmespuaro" />
+    <meta
+      name="twitter:title"
+      content="Szachy - gra, która uczy taktyki i strategii."
+    />
+    <meta name="twitter:description" content="Graj w szachy!" />
+    <meta
+      name="twitter:image"
+      content="https://wiktor-chess.netlify.app/para.svg"
+    />
+    <meta name="twitter:image:alt" content="Szach - Mat" />
+    <link rel="canonical" href="https://wiktor-chess.netlify.app" />
+    <title>Portfolio radomskiego szachisty</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177533497-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      gtag("config", "UA-177533497-1");
+    </script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Wiktor - radomski szachista",
+        "url": "https://wiktor-chess.netlify.app",
+        "address": "Radom, portfolio szachisty",
+        "sameAs": [
+          "https://www.youtube.com/channel/UCIiLB4Y_wLusGBWISSpCOBg?view_as=subscriber",
+          "https://twitter.com/holmespuaro",
+          "https://www.facebook.com/radomski.szachista.3"
+        ]
+      }
+    </script>
+    <script src="https://skrypt-cookies.pl/id/bc97833d298d0954.js"></script>
   </body>
 </html>
