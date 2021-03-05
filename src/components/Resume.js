@@ -250,6 +250,35 @@ const Resume = () => {
               Udział (środkowe miejsce w tabeli rozgrywek).
             </Typography>
           </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2021
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              I Klasyfikacyjy Turniej Szachowy „Dolina Krzemowa nad Mleczną”
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              03 marca 2021 r. do 7 kwietnia 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Udział.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
