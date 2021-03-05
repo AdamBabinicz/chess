@@ -262,7 +262,7 @@ const Resume = () => {
               aligh="center"
               className={classes.subHeading}
             >
-              I Klasyfikacyjy Turniej Szachowy „Dolina Krzemowa nad Mleczną”
+              I Klasyfikacyjny Turniej Szachowy „Dolina Krzemowa nad Mleczną”
             </Typography>
             <Typography
               variant="body1"
