@@ -300,7 +300,7 @@ const Resume = () => {
               aligh="center"
               style={{ color: "tan" }}
             >
-              Udział.
+              Zajęcie drugiego miejsca.
             </Typography>
           </Box>
 
@@ -324,7 +324,31 @@ const Resume = () => {
               aligh="center"
               style={{ color: "tan" }}
             >
-              Udział.
+              Zajęcie drugiego miejsca.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Korwin Cup
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              26 czerwca 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie ósmego miejsca na 30 uczestników.
             </Typography>
           </Box>
         </Box>
