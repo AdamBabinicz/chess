@@ -16,6 +16,8 @@ import project1 from "../images/1.jpg";
 import project2 from "../images/2.jpg";
 import project3 from "../images/3.jpg";
 import project4 from "../images/mdk.jpg";
+import project5 from "../images/21.jpg";
+import project6 from "../images/40.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -38,6 +40,74 @@ const Portfolio = () => {
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 6 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Project 6"
+                  height="auto"
+                  image={project6}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Mistrzostwa Szkół Wyższych
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 2 miejsca - Puchar.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+                <Button size="small" color="primary">
+                  Live Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+          {/* Project 5 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Project 5"
+                  height="auto"
+                  image={project5}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    II Turniej Szachowy o Puchar Firmy MK-Klimat
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 2 miejsca - Puchar.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+                <Button size="small" color="primary">
+                  Live Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
           {/* Project 4 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
@@ -109,7 +179,7 @@ const Portfolio = () => {
           </Grid>
 
           {/* Project 2 */}
-          <Grid item xs={12} sm={8} md={6}>
+          {/* <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
@@ -142,7 +212,7 @@ const Portfolio = () => {
                 </Button>
               </CardActions>
             </Card>
-          </Grid>
+          </Grid> */}
 
           {/* Project 3 */}
           <Grid item xs={12} sm={8} md={6}>
