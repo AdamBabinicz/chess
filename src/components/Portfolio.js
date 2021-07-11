@@ -3,10 +3,11 @@ import Popup from "./Popup";
 import { makeStyles } from "@material-ui/core/styles";
 import img1 from "../images/41.jpg";
 import img2 from "../images/20.jpg";
-import img3 from "../images/23.jpg";
+import img3 from "../images/statua.jpg";
 import img4 from "../images/24.jpg";
 import img5 from "../images/cross.png";
 import img6 from "../images/mans.svg";
+import img7 from "../images/mans.svg";
 import {
   Box,
   Grid,
@@ -26,6 +27,7 @@ import project4 from "../images/mdk.jpg";
 import project5 from "../images/21.jpg";
 import project6 from "../images/40.jpg";
 import project7 from "../images/22.jpg";
+import project8 from "../images/4.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -73,6 +75,12 @@ const Portfolio = () => {
     img6: img6,
     p6: "26.06.2021'",
     em6: "8/30",
+
+    title6:
+      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, Przemysłu Materiałów Budowlanych, Przemysłu  Drzewnego i Leśnego im. architekta Kazimierza Prokulskiego",
+    img7: img7,
+    p7: "09-10.2019' - 11.2019'",
+    em7: "Zdobycie IV kategorii (Dyplom)",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -81,6 +89,7 @@ const Portfolio = () => {
   const [buttonPopup4, setButtonPopup4] = useState(false);
   const [buttonPopup5, setButtonPopup5] = useState(false);
   const [buttonPopup6, setButtonPopup6] = useState(false);
+  const [buttonPopup7, setButtonPopup7] = useState(false);
 
   return (
     <>
@@ -427,6 +436,59 @@ const Portfolio = () => {
                 <p>{state.p5}</p>
                 <br />
                 <em>{state.em5}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 8 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Project 8"
+                  height="auto"
+                  image={project8}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm
+                    Budowlanych, Przemysłu Materiałów Budowlanych, Przemysłu
+                    Drzewnego i Leśnego im. architekta Kazimierza Prokulskiego
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zdobycie IV kategorii (Dyplom).
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup7(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup7(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup7} setTrigger={setButtonPopup7}>
+                <h3>{state.title6}</h3>
+                <br />
+                <img src={state.img7} alt="..." /> <br />
+                <p>{state.p7}</p>
+                <br />
+                <em>{state.em7}</em>
                 <br />
               </Popup>
             </Card>
