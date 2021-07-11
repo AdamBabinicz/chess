@@ -28,7 +28,7 @@ export const PopupInner = styled.div`
   padding: 32px;
   width: 100%;
   max-height: 100%;
-  height: 580px;
+  height: aut;
   width: 640px;
   background: #fff;
 
