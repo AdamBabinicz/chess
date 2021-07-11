@@ -77,7 +77,7 @@ const Portfolio = () => {
     em6: "8/30",
 
     title6:
-      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, Przemysłu Materiałów Budowlanych, ...",
+      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, ...",
     img7: img7,
     p7: "09-10.2019' - 11.2019'",
     em7: "Zdobycie IV kategorii (Dyplom)",
