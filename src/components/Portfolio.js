@@ -59,7 +59,7 @@ const Portfolio = () => {
     title2: "IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18",
     img3: img3,
     p3: "07.02.2020'",
-    em3: "___6^^^^",
+    em3: "Zajęcie 2 miejsca - Puchar",
 
     title3: "IV Turniej Szachowy Świętego Kazimierza Patrona Radomia",
     img4: img4,
