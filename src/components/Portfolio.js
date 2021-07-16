@@ -6,7 +6,7 @@ import img2 from "../images/20.jpg";
 import img3 from "../images/statua.jpg";
 import img4 from "../images/24.jpg";
 import img5 from "../images/cross.png";
-import img6 from "../images/26.jpg";
+import img6 from "../images/7.jpg";
 import img7 from "../images/mans.svg";
 import {
   Box,
@@ -26,7 +26,7 @@ import project3 from "../images/3.jpg";
 import project4 from "../images/mdk.jpg";
 import project5 from "../images/21.jpg";
 import project6 from "../images/40.jpg";
-import project7 from "../images/25.jpg";
+import project7 from "../images/5.jpg";
 import project8 from "../images/4.jpg";
 
 const useStyles = makeStyles({
