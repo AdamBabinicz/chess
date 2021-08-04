@@ -351,6 +351,30 @@ const Resume = () => {
               Zajęcie ósmego miejsca na 30 uczestników.
             </Typography>
           </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              IV Turniej Szachowy w Ośrodku wypoczynkowym Krokodyl
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              01 sierpnia 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie szóstego miejsca na 34 uczestników.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>

@@ -27,7 +27,7 @@ import project4 from "../images/mdk.jpg";
 import project5 from "../images/21.jpg";
 import project6 from "../images/40.jpg";
 import project7 from "../images/5.jpg";
-import project8 from "../images/4.jpg";
+import project8 from "../images/27.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
