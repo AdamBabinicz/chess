@@ -375,6 +375,30 @@ const Resume = () => {
               Zajęcie szóstego miejsca na 34 uczestników.
             </Typography>
           </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              III Turniej Szachowy Radomski Czerwiec' 76
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              14 lipca - 06 października 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zdobycie III kategorii.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
