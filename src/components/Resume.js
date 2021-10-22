@@ -396,7 +396,7 @@ const Resume = () => {
               aligh="center"
               style={{ color: "tan" }}
             >
-              Zdobycie III kategorii.
+              Zdobycie III kategorii (zajęcie trzeciego miejsca).
             </Typography>
           </Box>
         </Box>
