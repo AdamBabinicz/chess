@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Popup from "./Popup";
 import { makeStyles } from "@material-ui/core/styles";
+import img0 from "../images/27.jpg";
 import img1 from "../images/41.jpg";
 import img2 from "../images/20.jpg";
 import img3 from "../images/statua.jpg";
 import img4 from "../images/24.jpg";
-import img5 from "../images/cross.png";
+import img5 from "../images/game.png";
 import img6 from "../images/7.jpg";
 import img7 from "../images/mans.svg";
+import img8 from "../images/43.jpg";
 import {
   Box,
   Grid,
@@ -20,6 +22,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import Navbar from "./Navbar";
+import project0 from "../images/27.jpg";
 import project1 from "../images/1.jpg";
 import project2 from "../images/2.jpg";
 import project3 from "../images/3.jpg";
@@ -27,7 +30,7 @@ import project4 from "../images/mdk.jpg";
 import project5 from "../images/21.jpg";
 import project6 from "../images/40.jpg";
 import project7 from "../images/5.jpg";
-import project8 from "../images/27.jpg";
+import project8 from "../images/42.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -40,6 +43,11 @@ const useStyles = makeStyles({
     maxWidth: "90%",
     maxHeight: "100%",
     margin: "5rem auto",
+  },
+  cardImage: {
+    maxWidth: "100%",
+    maxHeight: "550px",
+    objectFit: "cover",
   },
 });
 
@@ -78,9 +86,15 @@ const Portfolio = () => {
 
     title6:
       "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, ...",
-    img7: img7,
+    img0: img0,
     p7: "09-10.2019' - 11.2019'",
     em7: "Zdobycie IV kategorii (Dyplom)",
+
+    title7:
+      "I Turniej o Puchar Burmistrza Miasta Pionki w szachach błyskawicznych",
+    img8: img8,
+    p8: "27.11.2021'",
+    em8: "14/24",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -90,17 +104,71 @@ const Portfolio = () => {
   const [buttonPopup5, setButtonPopup5] = useState(false);
   const [buttonPopup6, setButtonPopup6] = useState(false);
   const [buttonPopup7, setButtonPopup7] = useState(false);
+  const [buttonPopup8, setButtonPopup8] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 8 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 8"
+                  height="auto"
+                  image={project8}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    I Turniej o Puchar Burmistrza Miasta Pionki w szachach
+                    błyskawicznych
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 14 miejsca - Dyplom.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup8(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup8} setTrigger={setButtonPopup8}>
+                <h3>{state.title7}</h3>
+                <br />
+                <img src={state.img8} alt="..." /> <br />
+                <p>{state.p8}</p>
+                <br />
+                <em>{state.em8}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
           {/* Project 7 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 6"
                   height="auto"
@@ -152,6 +220,7 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 6"
                   height="auto"
@@ -203,6 +272,7 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 5"
                   height="auto"
@@ -254,6 +324,7 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 1"
                   height="auto"
@@ -306,6 +377,7 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 4"
                   height="auto"
@@ -393,6 +465,7 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 3"
                   height="auto"
@@ -446,10 +519,11 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
                   alt="Project 8"
                   height="auto"
-                  image={project8}
+                  image={project0}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
@@ -484,7 +558,7 @@ const Portfolio = () => {
               <Popup trigger={buttonPopup7} setTrigger={setButtonPopup7}>
                 <h3>{state.title6}</h3>
                 <br />
-                <img src={state.img7} alt="..." /> <br />
+                <img src={state.img0} alt="..." /> <br />
                 <p>{state.p7}</p>
                 <br />
                 <em>{state.em7}</em>

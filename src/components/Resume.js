@@ -399,6 +399,31 @@ const Resume = () => {
               Zdobycie III kategorii (zajęcie trzeciego miejsca).
             </Typography>
           </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              I Turniej o Puchar Burmistrza Miasta Pionki w szachach
+              błyskawicznych
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              27 listopada 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie czternastego miejsca na 24 uczestników.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
