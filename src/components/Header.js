@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     textAlign: "center",
     // zIndex: 1,
-    // marginTop: "8rem",
+    marginTop: "8rem",
   },
 }));
 

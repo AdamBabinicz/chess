@@ -3,3 +3,9 @@ body {
     url("./images/springer.svg") center center/ cover no-repeat fixed;
   overflow-x: hidden;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    background: url("./images/springer.svg") center center/ contain no-repeat
+      fixed;
+  }
+}
