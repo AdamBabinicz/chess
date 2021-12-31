@@ -44,13 +44,15 @@ const Header = () => {
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="avatar" />
       </Grid>
-      <Typography className={classes.title} variant="h4">
+      <Typography className={classes.title} variant="h3">
         <Typed strings={["Szachy <br/> - moja pasja!"]} typeSpeed={40} />
       </Typography>
       <br />
-      <Typography className={classes.subtitle} variant="h2">
+      <Typography className={classes.subtitle} variant="h4">
         <Typed
           strings={[
+            "Rank. FIDE (Blitz): 1626",
+            "Tytuł/Kat.: III",
             "♔ king",
             "♕ queen",
             "♖ rook/castle",
