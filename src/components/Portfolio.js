@@ -72,7 +72,7 @@ const Portfolio = () => {
     title3: "IV Turniej Szachowy Świętego Kazimierza Patrona Radomia",
     img4: img4,
     p4: "19.02.2020'",
-    em4: "()&&&@@@)",
+    em4: "udział",
 
     title4: "VII Memoriał Szachowy im. Jana Niedźwieckiego",
     img5: img5,
