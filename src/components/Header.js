@@ -15,11 +15,13 @@ const useStyles = makeStyles((theme) => ({
     color: "tomato",
     letterSpacing: "0.8rem",
     fontWeight: "700",
+    fontSize: "2.5rem",
     // marginTop: "5rem",
   },
   subtitle: {
     color: "white",
     marginBottom: "3rem",
+    fontSize: "1.5rem",
   },
   typedContainer: {
     position: "absolute",
@@ -44,11 +46,11 @@ const Header = () => {
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="avatar" />
       </Grid>
-      <Typography className={classes.title} variant="h3">
+      <Typography className={classes.title} variant="h1">
         <Typed strings={["Szachy <br/> - moja pasja!"]} typeSpeed={40} />
       </Typography>
       <br />
-      <Typography className={classes.subtitle} variant="h4">
+      <Typography className={classes.subtitle} variant="h2">
         <Typed
           strings={[
             "Rank. FIDE (Blitz): 1626",
