@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
-    // zIndex: 1,
+    // zIndex: -10,
     marginTop: "8rem",
   },
 }));
