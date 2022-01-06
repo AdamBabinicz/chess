@@ -57,7 +57,7 @@ const Portfolio = () => {
     title: "Mistrzostwa Szkół Wyższych",
     img: img1,
     p: "17.04.2021'",
-    em: "2/",
+    em: "2/14",
 
     title1: "II Turniej Szachowy o Puchar Firmy MK-Klimat",
     img2: img2,

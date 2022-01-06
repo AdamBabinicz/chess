@@ -109,7 +109,11 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar
           position="static"
-          style={{ background: "rgb(42, 42, 44)", position: "fixed" }}
+          style={{
+            background: "rgb(42, 42, 44)",
+            position: "fixed",
+            zIndex: "1",
+          }}
         >
           <Toolbar>
             <IconButton onClick={toggleSlider("right", true)}>
