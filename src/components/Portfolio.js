@@ -10,6 +10,7 @@ import img5 from "../images/game.png";
 import img6 from "../images/7.jpg";
 import img7 from "../images/mans.svg";
 import img8 from "../images/43.jpg";
+import img9 from "../images/9.jpg";
 import {
   Box,
   Grid,
@@ -31,6 +32,7 @@ import project5 from "../images/21.jpg";
 import project6 from "../images/40.jpg";
 import project7 from "../images/5.jpg";
 import project8 from "../images/42.jpg";
+import project9 from "../images/8.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -95,6 +97,11 @@ const Portfolio = () => {
     img8: img8,
     p8: "27.11.2021'",
     em8: "14/24",
+
+    title8: "V Memoriał Szachowy im. Stanleya Krol",
+    img9: img9,
+    p9: "13 - 27.10.2021'",
+    em9: "3/24",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -105,6 +112,7 @@ const Portfolio = () => {
   const [buttonPopup6, setButtonPopup6] = useState(false);
   const [buttonPopup7, setButtonPopup7] = useState(false);
   const [buttonPopup8, setButtonPopup8] = useState(false);
+  const [buttonPopup9, setButtonPopup9] = useState(false);
 
   return (
     <>
@@ -163,6 +171,59 @@ const Portfolio = () => {
               </Popup>
             </Card>
           </Grid>
+
+          {/* Project 9 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 9"
+                  height="auto"
+                  image={project9}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    V Memoriał Szachowy im. Stanleya Krol
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 3 miejsca - Medal.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup8(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup8} setTrigger={setButtonPopup8}>
+                <h3>{state.title8}</h3>
+                <br />
+                <img src={state.img9} alt="..." /> <br />
+                <p>{state.p9}</p>
+                <br />
+                <em>{state.em9}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 7 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>

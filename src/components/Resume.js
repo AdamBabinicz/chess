@@ -406,6 +406,30 @@ const Resume = () => {
               aligh="center"
               className={classes.subHeading}
             >
+              V Memoriał Szachowy im. Stanleya Krol
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              13 - 27 października 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie trzeciego miejsca.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
               I Turniej o Puchar Burmistrza Miasta Pionki w szachach
               błyskawicznych
             </Typography>
