@@ -448,6 +448,31 @@ const Resume = () => {
               Zajęcie czternastego miejsca na 24 uczestników.
             </Typography>
           </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza
+              Domagały
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              09 marca - 20 kwietnia 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie czwartego miejsca na 12 uczestników.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
