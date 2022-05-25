@@ -34,6 +34,7 @@ const Footer = () => {
         icon={<Facebook />}
         to="//www.facebook.com/radomski.szachista.3"
         target="_blank"
+        rel="noopener noreferrer"
         aria-label="Facebook"
       >
         <BottomNavigationAction icon={<Facebook />} />
@@ -44,6 +45,7 @@ const Footer = () => {
         icon={<Twitter />}
         to="//twitter.com/holmespuaro"
         target="_blank"
+        rel="noopener noreferrer"
         aria-label="Twitter"
       >
         <BottomNavigationAction icon={<Twitter />} />
@@ -54,6 +56,7 @@ const Footer = () => {
         icon={<YouTube />}
         to="//www.youtube.com/channel/UCIiLB4Y_wLusGBWISSpCOBg?view_as=subscriber"
         target="_blank"
+        rel="noopener noreferrer"
         aria-label="YouTube"
       >
         <BottomNavigationAction icon={<YouTube />} />
