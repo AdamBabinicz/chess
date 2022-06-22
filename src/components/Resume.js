@@ -448,7 +448,12 @@ const Resume = () => {
               Zajęcie czternastego miejsca na 24 uczestników.
             </Typography>
           </Box>
-
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2022
+          </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
@@ -471,6 +476,29 @@ const Resume = () => {
               style={{ color: "tan" }}
             >
               Zajęcie czwartego miejsca na 12 uczestników.
+            </Typography>
+          </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Refleks(ja) Szachisty - Prolog
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              19 czerwca 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie trzeciego miejsca na 17 uczestników.
             </Typography>
           </Box>
         </Box>
