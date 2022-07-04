@@ -12,7 +12,8 @@ import img7 from "../images/mans.svg";
 import img8 from "../images/43.jpg";
 import img9 from "../images/9.jpg";
 import img10 from "../images/10.jpg";
-import img11 from "../images/30.jpg";
+import img11 from "../images/29.jpg";
+import img12 from "../images/springer.svg";
 import {
   Box,
   Grid,
@@ -36,7 +37,8 @@ import project7 from "../images/5.jpg";
 import project8 from "../images/42.jpg";
 import project9 from "../images/8.jpg";
 import project10 from "../images/28.jpg";
-import project11 from "../images/29.jpg";
+import project11 from "../images/31.jpg";
+import project12 from "../images/32.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -117,6 +119,11 @@ const Portfolio = () => {
     img11: img11,
     p11: "19.06.2022'",
     em11: "3/17",
+
+    title11: "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
+    img12: img12,
+    p12: "03.07.2022'",
+    em12: "23/28",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -130,12 +137,66 @@ const Portfolio = () => {
   const [buttonPopup9, setButtonPopup9] = useState(false);
   const [buttonPopup10, setButtonPopup10] = useState(false);
   const [buttonPopup11, setButtonPopup11] = useState(false);
+  const [buttonPopup12, setButtonPopup12] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 12 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 12"
+                  height="auto"
+                  image={project12}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 -
+                    FIDE
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 23 miejsca.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup12(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup12} setTrigger={setButtonPopup12}>
+                <h3>{state.title12}</h3>
+                <br />
+                <img src={state.img12} alt="..." /> <br />
+                <p>{state.p12}</p>
+                <br />
+                <em>{state.em12}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 11 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>

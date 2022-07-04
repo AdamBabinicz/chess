@@ -501,6 +501,29 @@ const Resume = () => {
               Zajęcie trzeciego miejsca na 17 uczestników.
             </Typography>
           </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              03 lipca 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie dwudziestego trzeciego miejsca na 28 uczestników.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
