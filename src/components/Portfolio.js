@@ -109,7 +109,7 @@ const Portfolio = () => {
     p9: "13 - 27.10.2021'",
     em9: "3/24",
 
-    title09:
+    title9:
       "II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza Domagały",
     img10: img10,
     p10: "09.03 - 20.04.2022'",
@@ -120,7 +120,7 @@ const Portfolio = () => {
     p11: "19.06.2022'",
     em11: "3/17",
 
-    title11: "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
+    title12: "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
     img12: img12,
     p12: "03.07.2022'",
     em12: "23/28",
@@ -238,7 +238,7 @@ const Portfolio = () => {
                 </Button> */}
               </CardActions>
               <Popup trigger={buttonPopup11} setTrigger={setButtonPopup11}>
-                <h3>{state.title11}</h3>
+                <h3>{state.title10}</h3>
                 <br />
                 <img src={state.img11} alt="..." /> <br />
                 <p>{state.p11}</p>
