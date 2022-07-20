@@ -14,6 +14,7 @@ import img9 from "../images/9.jpg";
 import img10 from "../images/10.jpg";
 import img11 from "../images/29.jpg";
 import img12 from "../images/springer.svg";
+import img13 from "../images/11.jpg";
 import {
   Box,
   Grid,
@@ -39,6 +40,7 @@ import project9 from "../images/8.jpg";
 import project10 from "../images/28.jpg";
 import project11 from "../images/31.jpg";
 import project12 from "../images/32.jpg";
+import project13 from "../images/12.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -120,6 +122,11 @@ const Portfolio = () => {
     p11: "19.06.2022'",
     em11: "3/17",
 
+    title11: "Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze",
+    img13: img13,
+    p13: "17.07.2022'",
+    em13: "30/30",
+
     title12: "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
     img12: img12,
     p12: "03.07.2022'",
@@ -138,12 +145,66 @@ const Portfolio = () => {
   const [buttonPopup10, setButtonPopup10] = useState(false);
   const [buttonPopup11, setButtonPopup11] = useState(false);
   const [buttonPopup12, setButtonPopup12] = useState(false);
+  const [buttonPopup13, setButtonPopup13] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 13 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 13"
+                  height="auto"
+                  image={project13}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Symultana szachowa z arcymistrzem Zbigniewem Paklezą w
+                    Przysusze
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Udział w gronie 30 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup13(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup13} setTrigger={setButtonPopup13}>
+                <h3>{state.title11}</h3>
+                <br />
+                <img src={state.img13} alt="..." /> <br />
+                <p>{state.p13}</p>
+                <br />
+                <em>{state.em13}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 12 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
