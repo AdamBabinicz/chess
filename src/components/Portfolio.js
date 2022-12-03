@@ -15,6 +15,8 @@ import img10 from "../images/10.jpg";
 import img11 from "../images/29.jpg";
 import img12 from "../images/springer.svg";
 import img13 from "../images/11.jpg";
+import img14 from "../images/33.jpg";
+import img15 from "../images/chess.jpg";
 import {
   Box,
   Grid,
@@ -41,6 +43,8 @@ import project10 from "../images/28.jpg";
 import project11 from "../images/31.jpg";
 import project12 from "../images/32.jpg";
 import project13 from "../images/12.jpg";
+import project14 from "../images/34.jpg";
+import project15 from "../images/1.png";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -131,6 +135,16 @@ const Portfolio = () => {
     img12: img12,
     p12: "03.07.2022'",
     em12: "23/28",
+
+    title13: "XI Turniej witomiński w szachach szybkich 2022",
+    img14: img14,
+    p14: "12.11.2022'",
+    em14: "29/52",
+
+    title14: "POSTDATA OPEN B w Gdańsku 2022",
+    img15: img15,
+    p15: "03-04.12.2022'",
+    em15: "00/00",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -146,12 +160,118 @@ const Portfolio = () => {
   const [buttonPopup11, setButtonPopup11] = useState(false);
   const [buttonPopup12, setButtonPopup12] = useState(false);
   const [buttonPopup13, setButtonPopup13] = useState(false);
+  const [buttonPopup14, setButtonPopup14] = useState(false);
+  const [buttonPopup15, setButtonPopup15] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 15 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 15"
+                  height="auto"
+                  image={project15}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    POSTDATA OPEN B w Gdańsku
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie ... miejsca na ... uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup15(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup15} setTrigger={setButtonPopup15}>
+                <h3>{state.title14}</h3>
+                <br />
+                <img src={state.img15} alt="..." /> <br />
+                <p>{state.p15}</p>
+                <br />
+                <em>{state.em15}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 14 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 14"
+                  height="auto"
+                  image={project14}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    XI Turniej witomiński w szachach szybkich 2022 w Gdyni
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 29 miejsca na 52 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup14(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup14} setTrigger={setButtonPopup14}>
+                <h3>{state.title13}</h3>
+                <br />
+                <img src={state.img14} alt="..." /> <br />
+                <p>{state.p14}</p>
+                <br />
+                <em>{state.em14}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 13 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>

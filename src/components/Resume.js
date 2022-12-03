@@ -547,6 +547,54 @@ const Resume = () => {
               Udział w gronie 30 uczestników.
             </Typography>
           </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              XI Turniej witomiński w szachach szybkich 2022 w Gdyni
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              12 listopada 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 29 miejsca na 52 uczestników.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              POSTDATA OPEN B w Gdańsku
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              03 - 04 grudnia 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              xxxx
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
