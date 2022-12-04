@@ -592,7 +592,7 @@ const Resume = () => {
               aligh="center"
               style={{ color: "tan" }}
             >
-              xxxx
+              Zajęcie czwartego miejsca na 37 uczestników.
             </Typography>
           </Box>
         </Box>

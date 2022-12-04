@@ -144,7 +144,7 @@ const Portfolio = () => {
     title14: "POSTDATA OPEN B w Gdańsku 2022",
     img15: img15,
     p15: "03-04.12.2022'",
-    em15: "00/00",
+    em15: "4/37",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -188,7 +188,7 @@ const Portfolio = () => {
                     color="textSecondary"
                     component="p"
                   >
-                    Zajęcie ... miejsca na ... uczestników.
+                    Zajęcie 4 miejsca na 37 uczestników.
                   </Typography>
                 </CardContent>
               </CardActionArea>
