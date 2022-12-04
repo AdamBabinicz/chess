@@ -16,7 +16,7 @@ import img11 from "../images/29.jpg";
 import img12 from "../images/springer.svg";
 import img13 from "../images/11.jpg";
 import img14 from "../images/33.jpg";
-import img15 from "../images/chess.jpg";
+import img15 from "../images/36.jpg";
 import {
   Box,
   Grid,
@@ -44,7 +44,7 @@ import project11 from "../images/31.jpg";
 import project12 from "../images/32.jpg";
 import project13 from "../images/12.jpg";
 import project14 from "../images/34.jpg";
-import project15 from "../images/1.png";
+import project15 from "../images/35.jpg";
 
 const useStyles = makeStyles({
   mainContainer: {
