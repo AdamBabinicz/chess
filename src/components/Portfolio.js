@@ -60,7 +60,7 @@ const useStyles = makeStyles({
   },
   cardImage: {
     maxWidth: "100%",
-    maxHeight: "660px",
+    height: "660px",
     objectFit: "cover",
   },
 });

@@ -554,7 +554,7 @@ const Resume = () => {
               aligh="center"
               className={classes.subHeading}
             >
-              XI Turniej witomiński w szachach szybkich 2022 w Gdyni
+              XI Turniej witomiński w szachach szybkich 2022 w Gdyni - FIDE
             </Typography>
             <Typography
               variant="body1"
@@ -592,7 +592,8 @@ const Resume = () => {
               aligh="center"
               style={{ color: "tan" }}
             >
-              Zajęcie czwartego miejsca na 37 uczestników.
+              Zajęcie czwartego miejsca na 37 uczestników (nagroda pienężna i
+              nagrody rzeczowe).
             </Typography>
           </Box>
         </Box>

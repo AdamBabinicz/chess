@@ -19,4 +19,8 @@ body {
       ),
       url("./images/game.png") center top/ cover no-repeat fixed;
   }
+
+  img {
+    max-height: 300px;
+  }
 }
