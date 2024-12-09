@@ -596,6 +596,59 @@ const Resume = () => {
               nagrody rzeczowe).
             </Typography>
           </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2024
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości
+              Polski (internetowy)
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              7 października 2024 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 4 miejsca na 9 uczestników.
+            </Typography>
+          </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              07 - 08 grudnia 2024 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie szóstego miejsca na 26 uczestników.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
