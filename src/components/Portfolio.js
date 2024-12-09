@@ -29,22 +29,22 @@ import {
   Typography,
 } from "@material-ui/core";
 import Navbar from "./Navbar";
-import project0 from "../images/27.jpg";
-import project1 from "../images/1.jpg";
+import project0 from "../images/27.avif";
+import project1 from "../images/1.avif";
 import project2 from "../images/2.jpg";
-import project3 from "../images/3.jpg";
-import project4 from "../images/mdk.jpg";
-import project5 from "../images/21.jpg";
-import project6 from "../images/40.jpg";
-import project7 from "../images/5.jpg";
-import project8 from "../images/42.jpg";
-import project9 from "../images/8.jpg";
-import project10 from "../images/28.jpg";
-import project11 from "../images/31.jpg";
-import project12 from "../images/32.jpg";
-import project13 from "../images/12.jpg";
-import project14 from "../images/34.jpg";
-import project15 from "../images/35.jpg";
+import project3 from "../images/3.avif";
+import project4 from "../images/mdk.avif";
+import project5 from "../images/21.avif";
+import project6 from "../images/40.avif";
+import project7 from "../images/5.avif";
+import project8 from "../images/42.avif";
+import project9 from "../images/8.avif";
+import project10 from "../images/28.avif";
+import project11 from "../images/31.avif";
+import project12 from "../images/32.avif";
+import project13 from "../images/12.avif";
+import project14 from "../images/34.avif";
+import project15 from "../images/35.avif";
 
 const useStyles = makeStyles({
   mainContainer: {
