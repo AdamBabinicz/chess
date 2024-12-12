@@ -17,6 +17,7 @@ import img12 from "../images/springer.svg";
 import img13 from "../images/11.jpg";
 import img14 from "../images/33.jpg";
 import img15 from "../images/36.jpg";
+import img16 from "../images/44.avif";
 import {
   Box,
   Grid,
@@ -45,6 +46,7 @@ import project12 from "../images/32.avif";
 import project13 from "../images/12.avif";
 import project14 from "../images/34.avif";
 import project15 from "../images/35.avif";
+import project16 from "../images/37.avif";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -52,11 +54,22 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minMax(300px, auto))",
     background: "rgb(30, 28, 54)",
     paddingTop: "6rem",
+    paddingLeft: "6rem",
+    paddingRight: "6rem",
+
+    "@media (max-width: 768px)": {
+      paddingLeft: "0",
+      paddingRight: "0",
+    },
   },
   cardContainer: {
     maxWidth: "90%",
     maxHeight: "100%",
     margin: "5rem auto",
+
+    "@media (max-width: 768px)": {
+      margin: "1rem auto",
+    },
   },
   cardImage: {
     maxWidth: "100%",
@@ -145,6 +158,11 @@ const Portfolio = () => {
     img15: img15,
     p15: "03-04.12.2022'",
     em15: "4/37",
+
+    title15: "XII Memoriał Szachowy im. Jana Niedźwieckiego",
+    img16: img16,
+    p16: "07-08.12.2024'",
+    em16: "6/26",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -162,12 +180,65 @@ const Portfolio = () => {
   const [buttonPopup13, setButtonPopup13] = useState(false);
   const [buttonPopup14, setButtonPopup14] = useState(false);
   const [buttonPopup15, setButtonPopup15] = useState(false);
+  const [buttonPopup16, setButtonPopup16] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 16 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 16"
+                  height="auto"
+                  image={project16}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 6 miejsca na 26 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup16(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup16} setTrigger={setButtonPopup16}>
+                <h3>{state.title15}</h3>
+                <br />
+                <img src={state.img16} alt="..." /> <br />
+                <p>{state.p16}</p>
+                <br />
+                <em>{state.em16}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 15 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
