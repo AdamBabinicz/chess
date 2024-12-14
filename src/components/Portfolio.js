@@ -17,7 +17,8 @@ import img12 from "../images/springer.svg";
 import img13 from "../images/11.jpg";
 import img14 from "../images/33.jpg";
 import img15 from "../images/36.jpg";
-import img16 from "../images/44.avif";
+import img16 from "../images/chess.avif";
+import img17 from "../images/44.avif";
 import {
   Box,
   Grid,
@@ -46,7 +47,8 @@ import project12 from "../images/32.avif";
 import project13 from "../images/12.avif";
 import project14 from "../images/34.avif";
 import project15 from "../images/35.avif";
-import project16 from "../images/37.avif";
+import project16 from "../images/43.avif";
+import project17 from "../images/37.avif";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -159,10 +161,16 @@ const Portfolio = () => {
     p15: "03-04.12.2022'",
     em15: "4/37",
 
-    title15: "XII Memoriał Szachowy im. Jana Niedźwieckiego",
+    title15:
+      "Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości Polski (internet)",
     img16: img16,
-    p16: "07-08.12.2024'",
-    em16: "6/26",
+    p16: "07.10.2024'",
+    em16: "4/9",
+
+    title16: "XII Memoriał Szachowy im. Jana Niedźwieckiego",
+    img17: img17,
+    p17: "07-08.12.2024'",
+    em17: "6/26",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -181,12 +189,65 @@ const Portfolio = () => {
   const [buttonPopup14, setButtonPopup14] = useState(false);
   const [buttonPopup15, setButtonPopup15] = useState(false);
   const [buttonPopup16, setButtonPopup16] = useState(false);
+  const [buttonPopup17, setButtonPopup17] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 17 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 17"
+                  height="auto"
+                  image={project17}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 6 miejsca na 26 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup17(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup17} setTrigger={setButtonPopup17}>
+                <h3>{state.title16}</h3>
+                <br />
+                <img src={state.img17} alt="..." /> <br />
+                <p>{state.p17}</p>
+                <br />
+                <em>{state.em17}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 16 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
@@ -200,14 +261,15 @@ const Portfolio = () => {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
+                    Turniej szachowy z okazji 106 rocznicy ogłoszenia
+                    niepodległości Polski (internet)
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Zajęcie 6 miejsca na 26 uczestników.
+                    Zajęcie 4 miejsca na 9 uczestników (nagroda pieniężna).
                   </Typography>
                 </CardContent>
               </CardActionArea>
