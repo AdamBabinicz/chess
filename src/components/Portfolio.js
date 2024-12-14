@@ -35,7 +35,7 @@ import project0 from "../images/27.avif";
 import project1 from "../images/1.avif";
 import project2 from "../images/2.jpg";
 import project3 from "../images/3.avif";
-import project4 from "../images/mdk.avif";
+import project4 from "../images/45.avif";
 import project5 from "../images/21.avif";
 import project6 from "../images/40.avif";
 import project7 from "../images/5.avif";
@@ -47,7 +47,7 @@ import project12 from "../images/32.avif";
 import project13 from "../images/12.avif";
 import project14 from "../images/34.avif";
 import project15 from "../images/35.avif";
-import project16 from "../images/43.avif";
+import project16 from "../images/mdk.avif";
 import project17 from "../images/37.avif";
 
 const useStyles = makeStyles({
