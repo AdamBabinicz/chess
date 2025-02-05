@@ -50,7 +50,7 @@ import project14 from "../images/34.avif";
 import project15 from "../images/35.avif";
 import project16 from "../images/mdk.avif";
 import project17 from "../images/37.avif";
-import project18 from "../images/magnat.avif";
+import project18 from "../images/leb4.avif";
 
 const useStyles = makeStyles({
   mainContainer: {
