@@ -19,7 +19,7 @@ import img14 from "../images/33.jpg";
 import img15 from "../images/36.jpg";
 import img16 from "../images/chess.avif";
 import img17 from "../images/44.avif";
-import img18 from "../images/lebork.avif";
+import img18 from "../images/magnat.avif";
 import {
   Box,
   Grid,
