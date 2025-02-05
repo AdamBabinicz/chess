@@ -649,6 +649,35 @@ const Resume = () => {
               Zajęcie szóstego miejsca na 26 uczestników.
             </Typography>
           </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2025
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Karnawałowy Turniej Szachowy o 3 stówki - OPEN w Lęborku
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              02 lutego 2025 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie szesnastego miejsca na 30 uczestników.
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>
