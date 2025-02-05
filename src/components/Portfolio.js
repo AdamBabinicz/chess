@@ -224,7 +224,7 @@ const Portfolio = () => {
                     color="textSecondary"
                     component="p"
                   >
-                    Zajęcie 6 miejsca na 30 uczestników.
+                    Zajęcie 16 miejsca na 30 uczestników.
                   </Typography>
                 </CardContent>
               </CardActionArea>
