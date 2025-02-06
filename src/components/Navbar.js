@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 const menuItems = [
   {
     listIcon: <Home />,
-    listText: "Home",
+    listText: "Start",
     listPath: "/",
   },
   {
