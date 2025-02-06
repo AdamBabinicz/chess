@@ -53,7 +53,7 @@ const Header = () => {
       <Typography className={classes.subtitle} variant="h2">
         <Typed
           strings={[
-            "Rank. FIDE (Blitz): 1626 | 1485",
+            "Rank. FIDE (Blitz): 1776 | (Rapid): 1485",
             "Tytuł/Kat.: III",
             "♔ king",
             "♕ queen",
