@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
-import avatar from "../images/vik.avif";
+import avatar from "../images/viki1.jpg";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
