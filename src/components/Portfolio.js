@@ -8,7 +8,6 @@ import img3 from "../images/statua.jpg";
 import img4 from "../images/24.jpg";
 import img5 from "../images/game.png";
 import img6 from "../images/7.jpg";
-import img7 from "../images/mans.svg";
 import img8 from "../images/43.jpg";
 import img9 from "../images/9.jpg";
 import img10 from "../images/10.jpg";
@@ -20,6 +19,7 @@ import img15 from "../images/36.jpg";
 import img16 from "../images/chess.avif";
 import img17 from "../images/44.avif";
 import img18 from "../images/magnat.avif";
+import img19 from "../images/2_.png";
 import {
   Box,
   Grid,
@@ -34,7 +34,6 @@ import {
 import Navbar from "./Navbar";
 import project0 from "../images/27.avif";
 import project1 from "../images/1.avif";
-import project2 from "../images/2.jpg";
 import project3 from "../images/3.avif";
 import project4 from "../images/45.avif";
 import project5 from "../images/21.avif";
@@ -51,6 +50,7 @@ import project15 from "../images/35.avif";
 import project16 from "../images/mdk.avif";
 import project17 from "../images/37.avif";
 import project18 from "../images/leb4.avif";
+import project19 from "../images/2.png";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -178,10 +178,14 @@ const Portfolio = () => {
     img18: img18,
     p18: "02.02.2025'",
     em18: "16/30",
+
+    title18: "I Turniej witomiński w szachach szybkich 2026",
+    img19: img19,
+    p19: "10.01.2026'",
+    em19: "35/56",
   });
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup1, setButtonPopup1] = useState(false);
-  const [buttonPopup2, setButtonPopup2] = useState(false);
   const [buttonPopup3, setButtonPopup3] = useState(false);
   const [buttonPopup4, setButtonPopup4] = useState(false);
   const [buttonPopup5, setButtonPopup5] = useState(false);
@@ -198,12 +202,58 @@ const Portfolio = () => {
   const [buttonPopup16, setButtonPopup16] = useState(false);
   const [buttonPopup17, setButtonPopup17] = useState(false);
   const [buttonPopup18, setButtonPopup18] = useState(false);
+  const [buttonPopup19, setButtonPopup19] = useState(false);
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
+          {/* Project 19 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 19"
+                  height="auto"
+                  image={project19}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    I Turniej witomiński w szachach szybkich 2026
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 35 miejsca na 56 uczestników (zdobycie 4.0 pkt).
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup19(true)}
+                >
+                  Więcej
+                </Button>
+              </CardActions>
+              <Popup trigger={buttonPopup19} setTrigger={setButtonPopup19}>
+                <h3>{state.title18}</h3>
+                <br />
+                <img src={state.img19} alt="..." /> <br />
+                <p>{state.p19}</p>
+                <br />
+                <em>{state.em19}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
           {/* Project 18 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
@@ -1041,42 +1091,6 @@ const Portfolio = () => {
               </Popup>
             </Card>
           </Grid>
-
-          {/* Project 2 */}
-          {/* <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt="Project 2"
-                  height="auto"
-                  image={project2}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    IV Turniej Szachowy Świętego Kazimierza Patrona Radomia -
-                    19.02.2020 r.
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    W wyniku rozgrywek zwyciężył Mariusz Ćwiek przed Markiem
-                    Niedźwieckim i Stanisławem Waszkiewiczem.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Live Demo
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid> */}
 
           {/* Project 3 */}
           <Grid item xs={12} sm={8} md={6}>

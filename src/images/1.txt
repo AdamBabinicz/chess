@@ -1,0 +1,1881 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Box } from "@material-ui/core/";
+import Navbar from "./Navbar";
+
+const useStyles = makeStyles((theme) => ({
+  mainContainer: {
+    background: "rgb(30, 28, 54)",
+  },
+  timeLine: {
+    position: "relative",
+    padding: "1rem",
+    margin: "0 auto",
+    "&:before": {
+      content: "''",
+      position: "absolute",
+      height: "100%",
+      border: "1px solid tan",
+      right: "40px",
+      top: 0,
+    },
+    "&:after": {
+      content: "''",
+      display: "table",
+      clear: "both",
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: "2rem",
+      "&:before": {
+        left: "calc(50% - 1px)",
+        right: "auto",
+      },
+    },
+  },
+  timeLineItem: {
+    padding: "1rem",
+    borderBottom: "2px solid tan",
+    position: "relative",
+    margin: "1rem 3rem 1rem 1rem",
+    clear: "both",
+    "&:after": {
+      content: "''",
+      position: "absolute",
+    },
+    "&:before": {
+      content: "''",
+      position: "absolute",
+      right: "-0.625rem",
+      top: "calc(50% - 5px)",
+      borderStyle: "solid",
+      borderColor: "tomato tomato transparent transparent",
+      borderWidth: "0.625rem",
+      transform: "rotate(45deg)",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "44%",
+      margin: "1rem",
+      "&:nth-of-type(2n)": {
+        float: "right",
+        margin: "1rem",
+        borderColor: "tan",
+      },
+      "&:nth-of-type(2n):before": {
+        right: "auto",
+        left: "-0.625rem",
+        borderColor: "transparent transparent tomato tomato",
+      },
+    },
+  },
+  timeLineYear: {
+    textAlign: "center",
+    maxWidth: "9.375rem",
+    margin: "0 3rem 0 auto",
+    fontSize: "1.8rem",
+    background: "tomato",
+    color: "#fff",
+    lineHeight: 1,
+    padding: "0.5rem 0 1rem",
+    "&:before": {
+      display: "none",
+    },
+    [theme.breakpoints.up("md")]: {
+      textAlign: "center",
+      margin: "0 auto",
+      "&:nth-of-type(2n)": {
+        float: "none",
+        margin: "0 auto",
+      },
+      "&:nth-of-type(2n):before": {
+        display: "none",
+      },
+    },
+  },
+  heading: {
+    color: "tomato",
+    padding: "3rem 0",
+    // textTransform: "capitalize",
+    paddingTop: "6rem",
+  },
+  subHeading: {
+    color: "#fff",
+    padding: "0",
+    // textTransform: "capitalize",
+  },
+}));
+
+const Resume = () => {
+  const classes = useStyles();
+  return (
+    <>
+      <Navbar />
+      <Box component="header" className={classes.mainContainer}>
+        <Typography variant="h4" align="center" className={classes.heading}>
+          moja ścieżka szachisty
+        </Typography>
+        <Box component="div" className={classes.timeLine}>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2019
+          </Typography>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm
+              Budowlanych, Przemysłu Materiałów Budowlanych, Przemysłu Drzewnego
+              i Leśnego im. architekta Kazimierza Prokulskiego.
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              09 listopada 2019 r. - 10 listopada 2019 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zdobycie IV kategorii (Dyplom).
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              VII Memoriał Szachowy im. Jana Niedźwieckiego
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              04 grudnia 2019 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              6 miejsce uchonorowane Dyplomem.
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2020
+          </Typography>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              2020 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 2 miejsca - Puchar.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              IV Turniej Szachowy Świętego Kazimierza Patrona Radomia
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              19 lutego 2020 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Udział.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Grand Prix'2020 "Zamiast gier komputerowych zagraj kilka rund
+              szachowych"
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              23 kwietnia 2020 r. - 03 grudnia 2020 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Udział (środkowe miejsce w tabeli rozgrywek).
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2021
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              I Klasyfikacyjny Turniej Szachowy „Dolina Krzemowa nad Mleczną”
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              03 marca 2021 r. do 7 kwietnia 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Udział.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              II Turniej Szachowy o Puchar Firmy MK-Klimat
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie drugiego miejsca.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Mistrzostwa Szkół Wyższych
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie drugiego miejsca.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Korwin Cup
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              26 czerwca 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie ósmego miejsca na 30 uczestników.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              IV Turniej Szachowy w Ośrodku wypoczynkowym Krokodyl
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              01 sierpnia 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie szóstego miejsca na 34 uczestników.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              III Turniej Szachowy Radomski Czerwiec' 76
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              14 lipca - 06 października 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zdobycie III kategorii (zajęcie trzeciego miejsca).
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              V Memoriał Szachowy im. Stanleya Krol
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              13 - 27 października 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie trzeciego miejsca.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              I Turniej o Puchar Burmistrza Miasta Pionki w szachach
+              błyskawicznych
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              27 listopada 2021 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie czternastego miejsca na 24 uczestników.
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2022
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza
+              Domagały
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              09 marca - 20 kwietnia 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie czwartego miejsca na 12 uczestników.
+            </Typography>
+          </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Refleks(ja) Szachisty - Prolog
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              19 czerwca 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie trzeciego miejsca na 17 uczestników.
+            </Typography>
+          </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              03 lipca 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie dwudziestego trzeciego miejsca na 28 uczestników.
+            </Typography>
+          </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              17 lipca 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Udział w gronie 30 uczestników.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              XI Turniej witomiński w szachach szybkich 2022 w Gdyni - FIDE
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              12 listopada 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 29 miejsca na 52 uczestników.
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              POSTDATA OPEN B w Gdańsku
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              03 - 04 grudnia 2022 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie czwartego miejsca na 37 uczestników (nagroda pienężna i
+              nagrody rzeczowe).
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2024
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości
+              Polski (internetowy)
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              7 października 2024 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 4 miejsca na 9 uczestników.
+            </Typography>
+          </Box>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              07 - 08 grudnia 2024 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie szóstego miejsca na 26 uczestników.
+            </Typography>
+          </Box>
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2025
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              Karnawałowy Turniej Szachowy o 3 stówki - OPEN w Lęborku
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              02 lutego 2025 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie szesnastego miejsca na 30 uczestników.
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+    </>
+  );
+};
+
+export default Resume;
+-------------------------------
+import React, { useState } from "react";
+import Popup from "./Popup";
+import { makeStyles } from "@material-ui/core/styles";
+import img0 from "../images/27.jpg";
+import img1 from "../images/41.jpg";
+import img2 from "../images/20.jpg";
+import img3 from "../images/statua.jpg";
+import img4 from "../images/24.jpg";
+import img5 from "../images/game.png";
+import img6 from "../images/7.jpg";
+import img7 from "../images/mans.svg";
+import img8 from "../images/43.jpg";
+import img9 from "../images/9.jpg";
+import img10 from "../images/10.jpg";
+import img11 from "../images/29.jpg";
+import img12 from "../images/springer.svg";
+import img13 from "../images/11.jpg";
+import img14 from "../images/33.jpg";
+import img15 from "../images/36.jpg";
+import img16 from "../images/chess.avif";
+import img17 from "../images/44.avif";
+import img18 from "../images/magnat.avif";
+import {
+  Box,
+  Grid,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+} from "@material-ui/core";
+import Navbar from "./Navbar";
+import project0 from "../images/27.avif";
+import project1 from "../images/1.avif";
+import project2 from "../images/2.jpg";
+import project3 from "../images/3.avif";
+import project4 from "../images/45.avif";
+import project5 from "../images/21.avif";
+import project6 from "../images/40.avif";
+import project7 from "../images/5.avif";
+import project8 from "../images/42.avif";
+import project9 from "../images/8.avif";
+import project10 from "../images/28.avif";
+import project11 from "../images/31.avif";
+import project12 from "../images/32.avif";
+import project13 from "../images/12.avif";
+import project14 from "../images/34.avif";
+import project15 from "../images/35.avif";
+import project16 from "../images/mdk.avif";
+import project17 from "../images/37.avif";
+import project18 from "../images/leb4.avif";
+
+const useStyles = makeStyles({
+  mainContainer: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minMax(300px, auto))",
+    background: "rgb(30, 28, 54)",
+    paddingTop: "6rem",
+    paddingLeft: "6rem",
+    paddingRight: "6rem",
+
+    "@media (max-width: 768px)": {
+      paddingLeft: "0",
+      paddingRight: "0",
+    },
+  },
+  cardContainer: {
+    maxWidth: "90%",
+    maxHeight: "100%",
+    margin: "5rem auto",
+
+    "@media (max-width: 768px)": {
+      margin: "1rem auto",
+    },
+  },
+  cardImage: {
+    maxWidth: "100%",
+    height: "660px",
+    objectFit: "cover",
+  },
+});
+
+const Portfolio = () => {
+  const classes = useStyles();
+  const [state] = useState({
+    title: "Mistrzostwa Szkół Wyższych",
+    img: img1,
+    p: "17.04.2021'",
+    em: "2/14",
+
+    title1: "II Turniej Szachowy o Puchar Firmy MK-Klimat",
+    img2: img2,
+    p1: "03.03.2021' - 31.03.2021'",
+    em1: "2/28",
+
+    title2: "IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18",
+    img3: img3,
+    p3: "07.02.2020'",
+    em3: "Zajęcie 2 miejsca - Puchar",
+
+    title3: "IV Turniej Szachowy Świętego Kazimierza Patrona Radomia",
+    img4: img4,
+    p4: "19.02.2020'",
+    em4: "udział",
+
+    title4: "VII Memoriał Szachowy im. Jana Niedźwieckiego",
+    img5: img5,
+    p5: "04.12.2019'",
+    em5: "9/12",
+
+    title5: "Korwin Cup",
+    img6: img6,
+    p6: "26.06.2021'",
+    em6: "8/30",
+
+    title6:
+      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, ...",
+    img0: img0,
+    p7: "09-10.2019' - 11.2019'",
+    em7: "Zdobycie IV kategorii (Dyplom)",
+
+    title7:
+      "I Turniej o Puchar Burmistrza Miasta Pionki w szachach błyskawicznych",
+    img8: img8,
+    p8: "27.11.2021'",
+    em8: "14/24",
+
+    title8: "V Memoriał Szachowy im. Stanleya Krol",
+    img9: img9,
+    p9: "13 - 27.10.2021'",
+    em9: "3/24",
+
+    title9:
+      "II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza Domagały",
+    img10: img10,
+    p10: "09.03 - 20.04.2022'",
+    em10: "4/12",
+
+    title10: "Refleks(ja) Szachisty - Prolog",
+    img11: img11,
+    p11: "19.06.2022'",
+    em11: "3/17",
+
+    title11: "Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze",
+    img13: img13,
+    p13: "17.07.2022'",
+    em13: "30/30",
+
+    title12: "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
+    img12: img12,
+    p12: "03.07.2022'",
+    em12: "23/28",
+
+    title13: "XI Turniej witomiński w szachach szybkich 2022",
+    img14: img14,
+    p14: "12.11.2022'",
+    em14: "29/52",
+
+    title14: "POSTDATA OPEN B w Gdańsku 2022",
+    img15: img15,
+    p15: "03-04.12.2022'",
+    em15: "4/37",
+
+    title15:
+      "Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości Polski (internet)",
+    img16: img16,
+    p16: "07.10.2024'",
+    em16: "4/9",
+
+    title16: "XII Memoriał Szachowy im. Jana Niedźwieckiego",
+    img17: img17,
+    p17: "07-08.12.2024'",
+    em17: "6/26",
+
+    title17: "Karnawałowy Turniej Szachowy o 3 stówki - OPEN",
+    img18: img18,
+    p18: "02.02.2025'",
+    em18: "16/30",
+  });
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [buttonPopup1, setButtonPopup1] = useState(false);
+  const [buttonPopup2, setButtonPopup2] = useState(false);
+  const [buttonPopup3, setButtonPopup3] = useState(false);
+  const [buttonPopup4, setButtonPopup4] = useState(false);
+  const [buttonPopup5, setButtonPopup5] = useState(false);
+  const [buttonPopup6, setButtonPopup6] = useState(false);
+  const [buttonPopup7, setButtonPopup7] = useState(false);
+  const [buttonPopup8, setButtonPopup8] = useState(false);
+  const [buttonPopup9, setButtonPopup9] = useState(false);
+  const [buttonPopup10, setButtonPopup10] = useState(false);
+  const [buttonPopup11, setButtonPopup11] = useState(false);
+  const [buttonPopup12, setButtonPopup12] = useState(false);
+  const [buttonPopup13, setButtonPopup13] = useState(false);
+  const [buttonPopup14, setButtonPopup14] = useState(false);
+  const [buttonPopup15, setButtonPopup15] = useState(false);
+  const [buttonPopup16, setButtonPopup16] = useState(false);
+  const [buttonPopup17, setButtonPopup17] = useState(false);
+  const [buttonPopup18, setButtonPopup18] = useState(false);
+
+  return (
+    <>
+      <Navbar />
+      <Box component="div" className={classes.mainContainer}>
+        <Grid container justify="center">
+          {/* Project 18 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 18"
+                  height="auto"
+                  image={project18}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Karnawałowy Turniej Szachowy o 3 stówki - OPEN w Lęborku
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 16 miejsca na 30 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup18(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup18} setTrigger={setButtonPopup18}>
+                <h3>{state.title17}</h3>
+                <br />
+                <img src={state.img18} alt="..." /> <br />
+                <p>{state.p18}</p>
+                <br />
+                <em>{state.em18}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 17 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 17"
+                  height="auto"
+                  image={project17}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 6 miejsca na 26 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup17(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup17} setTrigger={setButtonPopup17}>
+                <h3>{state.title16}</h3>
+                <br />
+                <img src={state.img17} alt="..." /> <br />
+                <p>{state.p17}</p>
+                <br />
+                <em>{state.em17}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 16 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 16"
+                  height="auto"
+                  image={project16}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Turniej szachowy z okazji 106 rocznicy ogłoszenia
+                    niepodległości Polski (internet)
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 4 miejsca na 9 uczestników (nagroda pieniężna).
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup16(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup16} setTrigger={setButtonPopup16}>
+                <h3>{state.title15}</h3>
+                <br />
+                <img src={state.img16} alt="..." /> <br />
+                <p>{state.p16}</p>
+                <br />
+                <em>{state.em16}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 15 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 15"
+                  height="auto"
+                  image={project15}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    POSTDATA OPEN B w Gdańsku
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 4 miejsca na 37 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup15(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup15} setTrigger={setButtonPopup15}>
+                <h3>{state.title14}</h3>
+                <br />
+                <img src={state.img15} alt="..." /> <br />
+                <p>{state.p15}</p>
+                <br />
+                <em>{state.em15}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 14 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 14"
+                  height="auto"
+                  image={project14}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    XI Turniej witomiński w szachach szybkich 2022 w Gdyni
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 29 miejsca na 52 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup14(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup14} setTrigger={setButtonPopup14}>
+                <h3>{state.title13}</h3>
+                <br />
+                <img src={state.img14} alt="..." /> <br />
+                <p>{state.p14}</p>
+                <br />
+                <em>{state.em14}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 13 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 13"
+                  height="auto"
+                  image={project13}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Symultana szachowa z arcymistrzem Zbigniewem Paklezą w
+                    Przysusze
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Udział w gronie 30 uczestników.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup13(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup13} setTrigger={setButtonPopup13}>
+                <h3>{state.title11}</h3>
+                <br />
+                <img src={state.img13} alt="..." /> <br />
+                <p>{state.p13}</p>
+                <br />
+                <em>{state.em13}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 12 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 12"
+                  height="auto"
+                  image={project12}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 -
+                    FIDE
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 23 miejsca.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup12(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup12} setTrigger={setButtonPopup12}>
+                <h3>{state.title12}</h3>
+                <br />
+                <img src={state.img12} alt="..." /> <br />
+                <p>{state.p12}</p>
+                <br />
+                <em>{state.em12}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 11 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 11"
+                  height="auto"
+                  image={project11}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Refleks(ja) Szachisty - Prolog
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 3 miejsca - Nagroda pieniężna.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup11(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup11} setTrigger={setButtonPopup11}>
+                <h3>{state.title10}</h3>
+                <br />
+                <img src={state.img11} alt="..." /> <br />
+                <p>{state.p11}</p>
+                <br />
+                <em>{state.em11}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 10 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 10"
+                  height="auto"
+                  image={project10}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę
+                    Janusza Domagały
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 4 miejsca - Dyplom.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup10(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup10} setTrigger={setButtonPopup10}>
+                <h3>{state.title9}</h3>
+                <br />
+                <img src={state.img10} alt="..." /> <br />
+                <p>{state.p10}</p>
+                <br />
+                <em>{state.em10}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 8 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 8"
+                  height="auto"
+                  image={project8}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    I Turniej o Puchar Burmistrza Miasta Pionki w szachach
+                    błyskawicznych
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 14 miejsca - Dyplom.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup8(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup8} setTrigger={setButtonPopup8}>
+                <h3>{state.title7}</h3>
+                <br />
+                <img src={state.img8} alt="..." /> <br />
+                <p>{state.p8}</p>
+                <br />
+                <em>{state.em8}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 9 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 9"
+                  height="auto"
+                  image={project9}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    V Memoriał Szachowy im. Stanleya Krol
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 3 miejsca - Medal.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup9(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup9} setTrigger={setButtonPopup9}>
+                <h3>{state.title8}</h3>
+                <br />
+                <img src={state.img9} alt="..." /> <br />
+                <p>{state.p9}</p>
+                <br />
+                <em>{state.em9}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 7 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 6"
+                  height="auto"
+                  image={project7}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Korwin Cup
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 8 miejsca - Dyplom.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup6(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup6} setTrigger={setButtonPopup6}>
+                <h3>{state.title5}</h3>
+                <br />
+                <img src={state.img6} alt="..." /> <br />
+                <p>{state.p6}</p>
+                <br />
+                <em>{state.em6}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 6 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 6"
+                  height="auto"
+                  image={project6}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Mistrzostwa Szkół Wyższych
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 2 miejsca - Puchar.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <h3>{state.title}</h3>
+                <br />
+                <img src={state.img} alt="..." /> <br />
+                <p>{state.p}</p>
+                <br />
+                <em>{state.em}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 5 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 5"
+                  height="auto"
+                  image={project5}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    II Turniej Szachowy o Puchar Firmy MK-Klimat
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 2 miejsca - Puchar.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup1(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup1(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup1} setTrigger={setButtonPopup1}>
+                <h3>{state.title1}</h3>
+                <br />
+                <img src={state.img2} alt="..." /> <br />
+                <p>{state.p1}</p>
+                <br />
+                <em>{state.em1}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 1 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 1"
+                  height="auto"
+                  image={project1}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    IV Turniej Szachowy Świętego Kazimierza Patrona Radomia
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    W wyniku rozgrywek zwyciężył Mariusz Ćwiek przed Markiem
+                    Niedźwieckim i Stanisławem Waszkiewiczem.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup4(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup4(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup4} setTrigger={setButtonPopup4}>
+                <h3>{state.title3}</h3>
+                <br />
+                <img src={state.img4} alt="..." /> <br />
+                <p>{state.p4}</p>
+                <br />
+                <em>{state.em4}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 4 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 4"
+                  height="auto"
+                  image={project4}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zajęcie 2 miejsca - Puchar.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup3(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup3(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup3} setTrigger={setButtonPopup3}>
+                <h3>{state.title2}</h3>
+                <br />
+                <img src={state.img3} alt="..." /> <br />
+                <p>{state.p3}</p>
+                <br />
+                <em>{state.em3}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 2 */}
+          {/* <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Project 2"
+                  height="auto"
+                  image={project2}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    IV Turniej Szachowy Świętego Kazimierza Patrona Radomia -
+                    19.02.2020 r.
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    W wyniku rozgrywek zwyciężył Mariusz Ćwiek przed Markiem
+                    Niedźwieckim i Stanisławem Waszkiewiczem.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                  Share
+                </Button>
+                <Button size="small" color="primary">
+                  Live Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid> */}
+
+          {/* Project 3 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 3"
+                  height="auto"
+                  image={project3}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    VII Memoriał Szachowy im. Jana Niedźwieckiego
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Nagrody w postaci szachowych elektronicznych zegarów i
+                    medale ufundowała Firma Biuro Rachunkowe GREGFIN Marii i
+                    Pawła Gregorek ...
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup5(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup5(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup5} setTrigger={setButtonPopup5}>
+                <h3>{state.title4}</h3>
+                <br />
+                <img src={state.img5} alt="..." /> <br />
+                <p>{state.p5}</p>
+                <br />
+                <em>{state.em5}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+
+          {/* Project 8 */}
+          <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Project 8"
+                  height="auto"
+                  image={project0}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm
+                    Budowlanych, ...
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Zdobycie IV kategorii (Dyplom).
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup7(true)}
+                >
+                  Więcej
+                </Button>
+                {/* <Button
+                  size="small"
+                  color="primary"
+                  onClick={() => setButtonPopup7(true)}
+                >
+                  Live Demo
+                </Button> */}
+              </CardActions>
+              <Popup trigger={buttonPopup7} setTrigger={setButtonPopup7}>
+                <h3>{state.title6}</h3>
+                <br />
+                <img src={state.img0} alt="..." /> <br />
+                <p>{state.p7}</p>
+                <br />
+                <em>{state.em7}</em>
+                <br />
+              </Popup>
+            </Card>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
+  );
+};
+
+export default Portfolio;

@@ -678,6 +678,37 @@ const Resume = () => {
               Zajęcie szesnastego miejsca na 30 uczestników.
             </Typography>
           </Box>
+
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2026
+          </Typography>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              aligh="center"
+              className={classes.subHeading}
+            >
+              I Turniej witomiński w szachach szybkich 2026
+            </Typography>
+            <Typography
+              variant="body1"
+              aligh="center"
+              style={{ color: "tomato" }}
+            >
+              10 stycznia 2026 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              aligh="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 35 miejsca na 56 uczestników (zdobycie 4.0 pkt).
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </>

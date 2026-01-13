@@ -18,7 +18,6 @@ import {
 } from "@material-ui/core";
 import {
   MoreHoriz,
-  ArrowBack,
   AssignmentInd,
   Home,
   Apps,
@@ -26,7 +25,6 @@ import {
 } from "@material-ui/icons";
 import avatar from "../images/5-5.jpg";
 
-// CSS styles
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
@@ -119,7 +117,7 @@ const Navbar = () => {
             <IconButton onClick={toggleSlider("right", true)}>
               <MoreHoriz style={{ color: "tomato" }} />
             </IconButton>
-            <Typography variant="5" style={{ color: "tan" }}>
+            <Typography variant="h5" style={{ color: "tan" }}>
               Portfolio szachisty
             </Typography>
             <MobilRightMenuSlider

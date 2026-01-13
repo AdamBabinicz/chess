@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/styles";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import Facebook from "@material-ui/icons/Facebook";
 import Twitter from "@material-ui/icons/Twitter";
-import Instagram from "@material-ui/icons/Instagram";
 import YouTube from "@material-ui/icons/YouTube";
 import { Link } from "react-router-dom";
 
@@ -31,7 +30,6 @@ const Footer = () => {
       <Link
         className={classes.root}
         style={{ padding: 0 }}
-        icon={<Facebook />}
         to="//www.facebook.com/radomski.szachista.3"
         target="_blank"
         rel="noopener noreferrer"
@@ -42,7 +40,6 @@ const Footer = () => {
       <Link
         className={classes.root}
         style={{ padding: 0 }}
-        icon={<Twitter />}
         to="//twitter.com/holmespuaro"
         target="_blank"
         rel="noopener noreferrer"
@@ -53,8 +50,7 @@ const Footer = () => {
       <Link
         className={classes.root}
         style={{ padding: 0 }}
-        icon={<YouTube />}
-        to="//www.youtube.com/channel/UCIiLB4Y_wLusGBWISSpCOBg?view_as=subscriber"
+        to="//www.youtube.com"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="YouTube"
