@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
-import avatar from "../images/viki1.avif"; // <-- dla najlepszego wyniku podmień na wersję .avif/.webp 480x480px (np. vik.avif)
+import avatar from "../images/viki1.avif";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -21,8 +21,11 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 1.25,
     minHeight: "6.5rem",
     marginBottom: "1.5rem",
+    padding: "0 1rem",
     [theme.breakpoints.down("xs")]: {
-      minHeight: "9.5rem",
+      fontSize: "2.1rem",
+      letterSpacing: "0.35rem",
+      minHeight: "5.5rem",
     },
   },
   subtitle: {
@@ -30,7 +33,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "3rem",
     fontSize: "1.5rem",
     lineHeight: 1.4,
-    minHeight: "4.5rem",
+    minHeight: "5rem",
+    padding: "0 1rem",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.25rem",
+      minHeight: "4.5rem",
+    },
   },
   typedContainer: {
     position: "absolute",
@@ -50,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.typedContainer}>
+    <Box component="main" className={classes.typedContainer}>
       <Grid container justify="center">
         <Avatar
           className={classes.avatar}
@@ -60,7 +68,11 @@ const Header = () => {
         />
       </Grid>
       <Typography className={classes.title} variant="h1">
-        <Typed strings={["Szachy <br/> - moja pasja!"]} typeSpeed={40} />
+        <Typed
+          strings={["Szachy <br/> - moja pasja!"]}
+          typeSpeed={40}
+          showCursor={false}
+        />
       </Typography>
       <Typography className={classes.subtitle} variant="h2">
         <Typed
