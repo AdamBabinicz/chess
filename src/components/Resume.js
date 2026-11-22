@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@material-ui/core/";
+import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
@@ -94,13 +94,11 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     color: "tomato",
     padding: "3rem 0",
-    // textTransform: "capitalize",
     paddingTop: "6rem",
   },
   subHeading: {
     color: "#fff",
     padding: "0",
-    // textTransform: "capitalize",
   },
 }));
 
@@ -124,7 +122,7 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm
@@ -133,14 +131,14 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               09 listopada 2019 r. - 10 listopada 2019 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zdobycie IV kategorii (Dyplom).
@@ -150,24 +148,24 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               VII Memoriał Szachowy im. Jana Niedźwieckiego
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               04 grudnia 2019 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
-              6 miejsce uchonorowane Dyplomem.
+              6 miejsce uhonorowane Dyplomem.
             </Typography>
           </Box>
 
@@ -181,21 +179,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               2020 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie 2 miejsca - Puchar.
@@ -205,21 +203,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               IV Turniej Szachowy Świętego Kazimierza Patrona Radomia
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               19 lutego 2020 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Udział.
@@ -229,7 +227,7 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Grand Prix'2020 "Zamiast gier komputerowych zagraj kilka rund
@@ -237,43 +235,45 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               23 kwietnia 2020 r. - 03 grudnia 2020 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Udział (środkowe miejsce w tabeli rozgrywek).
             </Typography>
           </Box>
+
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
             2021
           </Typography>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               I Klasyfikacyjny Turniej Szachowy „Dolina Krzemowa nad Mleczną”
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               03 marca 2021 r. do 7 kwietnia 2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Udział.
@@ -283,21 +283,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               II Turniej Szachowy o Puchar Firmy MK-Klimat
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie drugiego miejsca.
@@ -307,21 +307,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Mistrzostwa Szkół Wyższych
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie drugiego miejsca.
@@ -331,21 +331,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Korwin Cup
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               26 czerwca 2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie ósmego miejsca na 30 uczestników.
@@ -355,21 +355,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               IV Turniej Szachowy w Ośrodku wypoczynkowym Krokodyl
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               01 sierpnia 2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie szóstego miejsca na 34 uczestników.
@@ -379,21 +379,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               III Turniej Szachowy Radomski Czerwiec' 76
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               14 lipca - 06 października 2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zdobycie III kategorii (zajęcie trzeciego miejsca).
@@ -403,21 +403,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               V Memoriał Szachowy im. Stanleya Krol
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               13 - 27 października 2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie trzeciego miejsca.
@@ -427,7 +427,7 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               I Turniej o Puchar Burmistrza Miasta Pionki w szachach
@@ -435,29 +435,31 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               27 listopada 2021 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie czternastego miejsca na 24 uczestników.
             </Typography>
           </Box>
+
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
             2022
           </Typography>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza
@@ -465,83 +467,86 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               09 marca - 20 kwietnia 2022 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie czwartego miejsca na 12 uczestników.
             </Typography>
           </Box>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Refleks(ja) Szachisty - Prolog
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               19 czerwca 2022 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie trzeciego miejsca na 17 uczestników.
             </Typography>
           </Box>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               03 lipca 2022 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie dwudziestego trzeciego miejsca na 28 uczestników.
             </Typography>
           </Box>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               17 lipca 2022 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Udział w gronie 30 uczestników.
@@ -551,21 +556,21 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               XI Turniej witomiński w szachach szybkich 2022 w Gdyni - FIDE
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               12 listopada 2022 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie 29 miejsca na 52 uczestników.
@@ -575,37 +580,39 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               POSTDATA OPEN B w Gdańsku
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               03 - 04 grudnia 2022 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie czwartego miejsca na 37 uczestników (nagroda pienężna i
               nagrody rzeczowe).
             </Typography>
           </Box>
+
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
             2024
           </Typography>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości
@@ -613,66 +620,69 @@ const Resume = () => {
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               7 października 2024 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie 4 miejsca na 9 uczestników.
             </Typography>
           </Box>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               07 - 08 grudnia 2024 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie szóstego miejsca na 26 uczestników.
             </Typography>
           </Box>
+
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
             2025
           </Typography>
+
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               Karnawałowy Turniej Szachowy o 3 stówki - OPEN w Lęborku
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               02 lutego 2025 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie szesnastego miejsca na 30 uczestników.
@@ -689,24 +699,48 @@ const Resume = () => {
           <Box component="div" className={classes.timeLineItem}>
             <Typography
               variant="h5"
-              aligh="center"
+              align="center"
               className={classes.subHeading}
             >
               I Turniej witomiński w szachach szybkich 2026
             </Typography>
             <Typography
               variant="body1"
-              aligh="center"
+              align="center"
               style={{ color: "tomato" }}
             >
               10 stycznia 2026 r.
             </Typography>
             <Typography
               variant="subtitle1"
-              aligh="center"
+              align="center"
               style={{ color: "tan" }}
             >
               Zajęcie 35 miejsca na 56 uczestników (zdobycie 4.0 pkt).
+            </Typography>
+          </Box>
+
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.subHeading}
+            >
+              I Grand Prix w Szachach Miasta i Gminy Przysucha 2026 - I edycja
+            </Typography>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "tomato" }}
+            >
+              22 listopada 2026 r.
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "tan" }}
+            >
+              Zajęcie 6 miejsca na 25 uczestników.
             </Typography>
           </Box>
         </Box>

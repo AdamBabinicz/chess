@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 import Popup from "./Popup";
 import { makeStyles } from "@material-ui/core/styles";
+import {
+  Box,
+  Grid,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+} from "@material-ui/core";
+import Navbar from "./Navbar";
+
 import img0 from "../images/27.jpg";
 import img1 from "../images/41.jpg";
 import img2 from "../images/20.jpg";
@@ -20,18 +33,8 @@ import img16 from "../images/chess.avif";
 import img17 from "../images/44.avif";
 import img18 from "../images/magnat.avif";
 import img19 from "../images/2_.png";
-import {
-  Box,
-  Grid,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Button,
-  Typography,
-} from "@material-ui/core";
-import Navbar from "./Navbar";
+import img20 from "../images/przysucha2026_.avif"; // <-- podmień na nazwę pliku do popupa
+
 import project0 from "../images/27.avif";
 import project1 from "../images/1.avif";
 import project3 from "../images/3.avif";
@@ -51,11 +54,10 @@ import project16 from "../images/mdk.avif";
 import project17 from "../images/37.avif";
 import project18 from "../images/leb4.avif";
 import project19 from "../images/2.png";
+import project20 from "../images/przysucha2026.avif"; // <-- podmień na nazwę pliku na kartę
 
 const useStyles = makeStyles({
   mainContainer: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minMax(300px, auto))",
     background: "rgb(30, 28, 54)",
     paddingTop: "6rem",
     paddingLeft: "6rem",
@@ -82,1122 +84,276 @@ const useStyles = makeStyles({
   },
 });
 
+const tournaments = [
+  {
+    cardTitle:
+      "I Grand Prix w Szachach Miasta i Gminy Przysucha 2026 - I edycja",
+    cardDescription: "Zajęcie 6 miejsca na 25 uczestników (4,5/7 pkt.).",
+    cardImage: project20,
+    popupTitle:
+      "I Grand Prix w Szachach Miasta i Gminy Przysucha 2026 - I edycja",
+    popupImage: img20,
+    popupDate: "22.11.2026'",
+    popupResult: "6/25 (4,5/7 pkt.)",
+  },
+  {
+    cardTitle: "I Turniej witomiński w szachach szybkich 2026",
+    cardDescription: "Zajęcie 35 miejsca na 56 uczestników (zdobycie 4.0 pkt).",
+    cardImage: project19,
+    popupTitle: "I Turniej witomiński w szachach szybkich 2026",
+    popupImage: img19,
+    popupDate: "10.01.2026'",
+    popupResult: "35/56",
+  },
+  {
+    cardTitle: "Karnawałowy Turniej Szachowy o 3 stówki - OPEN w Lęborku",
+    cardDescription: "Zajęcie 16 miejsca na 30 uczestników.",
+    cardImage: project18,
+    popupTitle: "Karnawałowy Turniej Szachowy o 3 stówki - OPEN",
+    popupImage: img18,
+    popupDate: "02.02.2025'",
+    popupResult: "16/30",
+  },
+  {
+    cardTitle: "XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu",
+    cardDescription: "Zajęcie 6 miejsca na 26 uczestników.",
+    cardImage: project17,
+    popupTitle: "XII Memoriał Szachowy im. Jana Niedźwieckiego",
+    popupImage: img17,
+    popupDate: "07-08.12.2024'",
+    popupResult: "6/26",
+  },
+  {
+    cardTitle:
+      "Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości Polski (internet)",
+    cardDescription: "Zajęcie 4 miejsca na 9 uczestników (nagroda pieniężna).",
+    cardImage: project16,
+    popupTitle:
+      "Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości Polski (internet)",
+    popupImage: img16,
+    popupDate: "07.10.2024'",
+    popupResult: "4/9",
+  },
+  {
+    cardTitle: "POSTDATA OPEN B w Gdańsku",
+    cardDescription: "Zajęcie 4 miejsca na 37 uczestników.",
+    cardImage: project15,
+    popupTitle: "POSTDATA OPEN B w Gdańsku 2022",
+    popupImage: img15,
+    popupDate: "03-04.12.2022'",
+    popupResult: "4/37",
+  },
+  {
+    cardTitle: "XI Turniej witomiński w szachach szybkich 2022 w Gdyni",
+    cardDescription: "Zajęcie 29 miejsca na 52 uczestników.",
+    cardImage: project14,
+    popupTitle: "XI Turniej witomiński w szachach szybkich 2022",
+    popupImage: img14,
+    popupDate: "12.11.2022'",
+    popupResult: "29/52",
+  },
+  {
+    cardTitle:
+      "Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze",
+    cardDescription: "Udział w gronie 30 uczestników.",
+    cardImage: project13,
+    popupTitle:
+      "Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze",
+    popupImage: img13,
+    popupDate: "17.07.2022'",
+    popupResult: "30/30",
+  },
+  {
+    cardTitle:
+      "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
+    cardDescription: "Zajęcie 23 miejsca.",
+    cardImage: project12,
+    popupTitle:
+      "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
+    popupImage: img12,
+    popupDate: "03.07.2022'",
+    popupResult: "23/28",
+  },
+  {
+    cardTitle: "Refleks(ja) Szachisty - Prolog",
+    cardDescription: "Zajęcie 3 miejsca - Nagroda pieniężna.",
+    cardImage: project11,
+    popupTitle: "Refleks(ja) Szachisty - Prolog",
+    popupImage: img11,
+    popupDate: "19.06.2022'",
+    popupResult: "3/17",
+  },
+  {
+    cardTitle:
+      "II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza Domagały",
+    cardDescription: "Zajęcie 4 miejsca - Dyplom.",
+    cardImage: project10,
+    popupTitle:
+      "II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza Domagały",
+    popupImage: img10,
+    popupDate: "09.03 - 20.04.2022'",
+    popupResult: "4/12",
+  },
+  {
+    cardTitle:
+      "I Turniej o Puchar Burmistrza Miasta Pionki w szachach błyskawicznych",
+    cardDescription: "Zajęcie 14 miejsca - Dyplom.",
+    cardImage: project8,
+    popupTitle:
+      "I Turniej o Puchar Burmistrza Miasta Pionki w szachach błyskawicznych",
+    popupImage: img8,
+    popupDate: "27.11.2021'",
+    popupResult: "14/24",
+  },
+  {
+    cardTitle: "V Memoriał Szachowy im. Stanleya Krol",
+    cardDescription: "Zajęcie 3 miejsca - Medal.",
+    cardImage: project9,
+    popupTitle: "V Memoriał Szachowy im. Stanleya Krol",
+    popupImage: img9,
+    popupDate: "13 - 27.10.2021'",
+    popupResult: "3/24",
+  },
+  {
+    cardTitle: "Korwin Cup",
+    cardDescription: "Zajęcie 8 miejsca - Dyplom.",
+    cardImage: project7,
+    popupTitle: "Korwin Cup",
+    popupImage: img6,
+    popupDate: "26.06.2021'",
+    popupResult: "8/30",
+  },
+  {
+    cardTitle: "Mistrzostwa Szkół Wyższych",
+    cardDescription: "Zajęcie 2 miejsca - Puchar.",
+    cardImage: project6,
+    popupTitle: "Mistrzostwa Szkół Wyższych",
+    popupImage: img1,
+    popupDate: "17.04.2021'",
+    popupResult: "2/14",
+  },
+  {
+    cardTitle: "II Turniej Szachowy o Puchar Firmy MK-Klimat",
+    cardDescription: "Zajęcie 2 miejsca - Puchar.",
+    cardImage: project5,
+    popupTitle: "II Turniej Szachowy o Puchar Firmy MK-Klimat",
+    popupImage: img2,
+    popupDate: "03.03.2021' - 31.03.2021'",
+    popupResult: "2/28",
+  },
+  {
+    cardTitle: "IV Turniej Szachowy Świętego Kazimierza Patrona Radomia",
+    cardDescription:
+      "W wyniku rozgrywek zwyciężył Mariusz Ćwiek przed Markiem Niedźwieckim i Stanisławem Waszkiewiczem.",
+    cardImage: project1,
+    popupTitle: "IV Turniej Szachowy Świętego Kazimierza Patrona Radomia",
+    popupImage: img4,
+    popupDate: "19.02.2020'",
+    popupResult: "udział",
+  },
+  {
+    cardTitle: "IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18",
+    cardDescription: "Zajęcie 2 miejsca - Puchar.",
+    cardImage: project4,
+    popupTitle: "IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18",
+    popupImage: img3,
+    popupDate: "07.02.2020'",
+    popupResult: "Zajęcie 2 miejsca - Puchar",
+  },
+  {
+    cardTitle: "VII Memoriał Szachowy im. Jana Niedźwieckiego",
+    cardDescription:
+      "Nagrody w postaci szachowych elektronicznych zegarów i medale ufundowała Firma Biuro Rachunkowe GREGFIN Marii i Pawła Gregorek ...",
+    cardImage: project3,
+    popupTitle: "VII Memoriał Szachowy im. Jana Niedźwieckiego",
+    popupImage: img5,
+    popupDate: "04.12.2019'",
+    popupResult: "9/12",
+  },
+  {
+    cardTitle:
+      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, ...",
+    cardDescription: "Zdobycie IV kategorii (Dyplom).",
+    cardImage: project0,
+    popupTitle:
+      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, ...",
+    popupImage: img0,
+    popupDate: "09-10.2019' - 11.2019'",
+    popupResult: "Zdobycie IV kategorii (Dyplom)",
+  },
+];
+
 const Portfolio = () => {
   const classes = useStyles();
-  const [state] = useState({
-    title: "Mistrzostwa Szkół Wyższych",
-    img: img1,
-    p: "17.04.2021'",
-    em: "2/14",
+  const [openPopupIndex, setOpenPopupIndex] = useState(null);
 
-    title1: "II Turniej Szachowy o Puchar Firmy MK-Klimat",
-    img2: img2,
-    p1: "03.03.2021' - 31.03.2021'",
-    em1: "2/28",
-
-    title2: "IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18",
-    img3: img3,
-    p3: "07.02.2020'",
-    em3: "Zajęcie 2 miejsca - Puchar",
-
-    title3: "IV Turniej Szachowy Świętego Kazimierza Patrona Radomia",
-    img4: img4,
-    p4: "19.02.2020'",
-    em4: "udział",
-
-    title4: "VII Memoriał Szachowy im. Jana Niedźwieckiego",
-    img5: img5,
-    p5: "04.12.2019'",
-    em5: "9/12",
-
-    title5: "Korwin Cup",
-    img6: img6,
-    p6: "26.06.2021'",
-    em6: "8/30",
-
-    title6:
-      "IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm Budowlanych, ...",
-    img0: img0,
-    p7: "09-10.2019' - 11.2019'",
-    em7: "Zdobycie IV kategorii (Dyplom)",
-
-    title7:
-      "I Turniej o Puchar Burmistrza Miasta Pionki w szachach błyskawicznych",
-    img8: img8,
-    p8: "27.11.2021'",
-    em8: "14/24",
-
-    title8: "V Memoriał Szachowy im. Stanleya Krol",
-    img9: img9,
-    p9: "13 - 27.10.2021'",
-    em9: "3/24",
-
-    title9:
-      "II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę Janusza Domagały",
-    img10: img10,
-    p10: "09.03 - 20.04.2022'",
-    em10: "4/12",
-
-    title10: "Refleks(ja) Szachisty - Prolog",
-    img11: img11,
-    p11: "19.06.2022'",
-    em11: "3/17",
-
-    title11: "Symultana szachowa z arcymistrzem Zbigniewem Paklezą w Przysusze",
-    img13: img13,
-    p13: "17.07.2022'",
-    em13: "30/30",
-
-    title12: "Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 - FIDE",
-    img12: img12,
-    p12: "03.07.2022'",
-    em12: "23/28",
-
-    title13: "XI Turniej witomiński w szachach szybkich 2022",
-    img14: img14,
-    p14: "12.11.2022'",
-    em14: "29/52",
-
-    title14: "POSTDATA OPEN B w Gdańsku 2022",
-    img15: img15,
-    p15: "03-04.12.2022'",
-    em15: "4/37",
-
-    title15:
-      "Turniej szachowy z okazji 106 rocznicy ogłoszenia niepodległości Polski (internet)",
-    img16: img16,
-    p16: "07.10.2024'",
-    em16: "4/9",
-
-    title16: "XII Memoriał Szachowy im. Jana Niedźwieckiego",
-    img17: img17,
-    p17: "07-08.12.2024'",
-    em17: "6/26",
-
-    title17: "Karnawałowy Turniej Szachowy o 3 stówki - OPEN",
-    img18: img18,
-    p18: "02.02.2025'",
-    em18: "16/30",
-
-    title18: "I Turniej witomiński w szachach szybkich 2026",
-    img19: img19,
-    p19: "10.01.2026'",
-    em19: "35/56",
-  });
-  const [buttonPopup, setButtonPopup] = useState(false);
-  const [buttonPopup1, setButtonPopup1] = useState(false);
-  const [buttonPopup3, setButtonPopup3] = useState(false);
-  const [buttonPopup4, setButtonPopup4] = useState(false);
-  const [buttonPopup5, setButtonPopup5] = useState(false);
-  const [buttonPopup6, setButtonPopup6] = useState(false);
-  const [buttonPopup7, setButtonPopup7] = useState(false);
-  const [buttonPopup8, setButtonPopup8] = useState(false);
-  const [buttonPopup9, setButtonPopup9] = useState(false);
-  const [buttonPopup10, setButtonPopup10] = useState(false);
-  const [buttonPopup11, setButtonPopup11] = useState(false);
-  const [buttonPopup12, setButtonPopup12] = useState(false);
-  const [buttonPopup13, setButtonPopup13] = useState(false);
-  const [buttonPopup14, setButtonPopup14] = useState(false);
-  const [buttonPopup15, setButtonPopup15] = useState(false);
-  const [buttonPopup16, setButtonPopup16] = useState(false);
-  const [buttonPopup17, setButtonPopup17] = useState(false);
-  const [buttonPopup18, setButtonPopup18] = useState(false);
-  const [buttonPopup19, setButtonPopup19] = useState(false);
+  const handleSetTrigger = (index) => (valueOrUpdater) => {
+    setOpenPopupIndex((prev) => {
+      const isOpen = prev === index;
+      const next =
+        typeof valueOrUpdater === "function"
+          ? valueOrUpdater(isOpen)
+          : valueOrUpdater;
+      return next ? index : null;
+    });
+  };
 
   return (
     <>
       <Navbar />
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center">
-          {/* Project 19 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 19"
-                  height="auto"
-                  image={project19}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    I Turniej witomiński w szachach szybkich 2026
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
+          {tournaments.map((tournament, index) => (
+            <Grid item xs={12} sm={8} md={6} key={tournament.cardTitle}>
+              <Card className={classes.cardContainer}>
+                <CardActionArea onClick={() => setOpenPopupIndex(index)}>
+                  <CardMedia
+                    className={classes.cardImage}
+                    component="img"
+                    alt={tournament.cardTitle}
+                    image={tournament.cardImage}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5">
+                      {tournament.cardTitle}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {tournament.cardDescription}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={() => setOpenPopupIndex(index)}
                   >
-                    Zajęcie 35 miejsca na 56 uczestników (zdobycie 4.0 pkt).
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup19(true)}
+                    Więcej
+                  </Button>
+                </CardActions>
+                <Popup
+                  trigger={openPopupIndex === index}
+                  setTrigger={handleSetTrigger(index)}
                 >
-                  Więcej
-                </Button>
-              </CardActions>
-              <Popup trigger={buttonPopup19} setTrigger={setButtonPopup19}>
-                <h3>{state.title18}</h3>
-                <br />
-                <img src={state.img19} alt="..." /> <br />
-                <p>{state.p19}</p>
-                <br />
-                <em>{state.em19}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 18 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 18"
-                  height="auto"
-                  image={project18}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Karnawałowy Turniej Szachowy o 3 stówki - OPEN w Lęborku
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 16 miejsca na 30 uczestników.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup18(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup18} setTrigger={setButtonPopup18}>
-                <h3>{state.title17}</h3>
-                <br />
-                <img src={state.img18} alt="..." /> <br />
-                <p>{state.p18}</p>
-                <br />
-                <em>{state.em18}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 17 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 17"
-                  height="auto"
-                  image={project17}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    XII Memoriał Szachowy im. Jana Niedźwieckiego w Radomiu
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 6 miejsca na 26 uczestników.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup17(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup17} setTrigger={setButtonPopup17}>
-                <h3>{state.title16}</h3>
-                <br />
-                <img src={state.img17} alt="..." /> <br />
-                <p>{state.p17}</p>
-                <br />
-                <em>{state.em17}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 16 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 16"
-                  height="auto"
-                  image={project16}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Turniej szachowy z okazji 106 rocznicy ogłoszenia
-                    niepodległości Polski (internet)
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 4 miejsca na 9 uczestników (nagroda pieniężna).
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup16(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup16} setTrigger={setButtonPopup16}>
-                <h3>{state.title15}</h3>
-                <br />
-                <img src={state.img16} alt="..." /> <br />
-                <p>{state.p16}</p>
-                <br />
-                <em>{state.em16}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 15 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 15"
-                  height="auto"
-                  image={project15}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    POSTDATA OPEN B w Gdańsku
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 4 miejsca na 37 uczestników.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup15(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup15} setTrigger={setButtonPopup15}>
-                <h3>{state.title14}</h3>
-                <br />
-                <img src={state.img15} alt="..." /> <br />
-                <p>{state.p15}</p>
-                <br />
-                <em>{state.em15}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 14 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 14"
-                  height="auto"
-                  image={project14}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    XI Turniej witomiński w szachach szybkich 2022 w Gdyni
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 29 miejsca na 52 uczestników.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup14(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup14} setTrigger={setButtonPopup14}>
-                <h3>{state.title13}</h3>
-                <br />
-                <img src={state.img14} alt="..." /> <br />
-                <p>{state.p14}</p>
-                <br />
-                <em>{state.em14}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 13 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 13"
-                  height="auto"
-                  image={project13}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Symultana szachowa z arcymistrzem Zbigniewem Paklezą w
-                    Przysusze
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Udział w gronie 30 uczestników.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup13(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup13} setTrigger={setButtonPopup13}>
-                <h3>{state.title11}</h3>
-                <br />
-                <img src={state.img13} alt="..." /> <br />
-                <p>{state.p13}</p>
-                <br />
-                <em>{state.em13}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 12 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 12"
-                  height="auto"
-                  image={project12}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Grand Prix Ziemi Szydłowieckiej - Bitwa pod Guzowem 1607 -
-                    FIDE
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 23 miejsca.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup12(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup12} setTrigger={setButtonPopup12}>
-                <h3>{state.title12}</h3>
-                <br />
-                <img src={state.img12} alt="..." /> <br />
-                <p>{state.p12}</p>
-                <br />
-                <em>{state.em12}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 11 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 11"
-                  height="auto"
-                  image={project11}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Refleks(ja) Szachisty - Prolog
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 3 miejsca - Nagroda pieniężna.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup11(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup11} setTrigger={setButtonPopup11}>
-                <h3>{state.title10}</h3>
-                <br />
-                <img src={state.img11} alt="..." /> <br />
-                <p>{state.p11}</p>
-                <br />
-                <em>{state.em11}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 10 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 10"
-                  height="auto"
-                  image={project10}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    II Turniej Szachowy o Puchar Firmy KNM Kominy Na Miarę
-                    Janusza Domagały
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 4 miejsca - Dyplom.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup10(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup10} setTrigger={setButtonPopup10}>
-                <h3>{state.title9}</h3>
-                <br />
-                <img src={state.img10} alt="..." /> <br />
-                <p>{state.p10}</p>
-                <br />
-                <em>{state.em10}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 8 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 8"
-                  height="auto"
-                  image={project8}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    I Turniej o Puchar Burmistrza Miasta Pionki w szachach
-                    błyskawicznych
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 14 miejsca - Dyplom.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup8(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup8} setTrigger={setButtonPopup8}>
-                <h3>{state.title7}</h3>
-                <br />
-                <img src={state.img8} alt="..." /> <br />
-                <p>{state.p8}</p>
-                <br />
-                <em>{state.em8}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 9 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 9"
-                  height="auto"
-                  image={project9}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    V Memoriał Szachowy im. Stanleya Krol
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 3 miejsca - Medal.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup9(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup9} setTrigger={setButtonPopup9}>
-                <h3>{state.title8}</h3>
-                <br />
-                <img src={state.img9} alt="..." /> <br />
-                <p>{state.p9}</p>
-                <br />
-                <em>{state.em9}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 7 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 6"
-                  height="auto"
-                  image={project7}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Korwin Cup
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 8 miejsca - Dyplom.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup6(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup6} setTrigger={setButtonPopup6}>
-                <h3>{state.title5}</h3>
-                <br />
-                <img src={state.img6} alt="..." /> <br />
-                <p>{state.p6}</p>
-                <br />
-                <em>{state.em6}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 6 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 6"
-                  height="auto"
-                  image={project6}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Mistrzostwa Szkół Wyższych
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 2 miejsca - Puchar.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <h3>{state.title}</h3>
-                <br />
-                <img src={state.img} alt="..." /> <br />
-                <p>{state.p}</p>
-                <br />
-                <em>{state.em}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 5 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 5"
-                  height="auto"
-                  image={project5}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    II Turniej Szachowy o Puchar Firmy MK-Klimat
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 2 miejsca - Puchar.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup1(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup1(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup1} setTrigger={setButtonPopup1}>
-                <h3>{state.title1}</h3>
-                <br />
-                <img src={state.img2} alt="..." /> <br />
-                <p>{state.p1}</p>
-                <br />
-                <em>{state.em1}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 1 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 1"
-                  height="auto"
-                  image={project1}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    IV Turniej Szachowy Świętego Kazimierza Patrona Radomia
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    W wyniku rozgrywek zwyciężył Mariusz Ćwiek przed Markiem
-                    Niedźwieckim i Stanisławem Waszkiewiczem.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup4(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup4(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup4} setTrigger={setButtonPopup4}>
-                <h3>{state.title3}</h3>
-                <br />
-                <img src={state.img4} alt="..." /> <br />
-                <p>{state.p4}</p>
-                <br />
-                <em>{state.em4}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 4 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 4"
-                  height="auto"
-                  image={project4}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    IX Memoriał Trenerów Szachowych MDK, chłopcy do lat 18
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zajęcie 2 miejsca - Puchar.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup3(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup3(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup3} setTrigger={setButtonPopup3}>
-                <h3>{state.title2}</h3>
-                <br />
-                <img src={state.img3} alt="..." /> <br />
-                <p>{state.p3}</p>
-                <br />
-                <em>{state.em3}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 3 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 3"
-                  height="auto"
-                  image={project3}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    VII Memoriał Szachowy im. Jana Niedźwieckiego
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Nagrody w postaci szachowych elektronicznych zegarów i
-                    medale ufundowała Firma Biuro Rachunkowe GREGFIN Marii i
-                    Pawła Gregorek ...
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup5(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup5(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup5} setTrigger={setButtonPopup5}>
-                <h3>{state.title4}</h3>
-                <br />
-                <img src={state.img5} alt="..." /> <br />
-                <p>{state.p5}</p>
-                <br />
-                <em>{state.em5}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
-
-          {/* Project 8 */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Project 8"
-                  height="auto"
-                  image={project0}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    IV Otwarty Ogólnopolski Memoriał Szachowy Pracowników Firm
-                    Budowlanych, ...
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Zdobycie IV kategorii (Dyplom).
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup7(true)}
-                >
-                  Więcej
-                </Button>
-                {/* <Button
-                  size="small"
-                  color="primary"
-                  onClick={() => setButtonPopup7(true)}
-                >
-                  Live Demo
-                </Button> */}
-              </CardActions>
-              <Popup trigger={buttonPopup7} setTrigger={setButtonPopup7}>
-                <h3>{state.title6}</h3>
-                <br />
-                <img src={state.img0} alt="..." /> <br />
-                <p>{state.p7}</p>
-                <br />
-                <em>{state.em7}</em>
-                <br />
-              </Popup>
-            </Card>
-          </Grid>
+                  <h3>{tournament.popupTitle}</h3>
+                  <br />
+                  <img
+                    src={tournament.popupImage}
+                    alt={tournament.popupTitle}
+                  />
+                  <br />
+                  <p>{tournament.popupDate}</p>
+                  <br />
+                  <em>{tournament.popupResult}</em>
+                  <br />
+                </Popup>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </>
