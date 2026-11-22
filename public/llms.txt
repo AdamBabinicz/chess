@@ -1,0 +1,12 @@
+# Wiktor - Portfolio radomskiego szachisty
+
+> Osobista strona i portfolio radomskiego szachisty prezentujące historię startów turniejowych z lat 2019–2026, wyniki oraz kontakt.
+
+Ranking FIDE: Blitz 1776, Rapid 1485. Kategoria szachowa: III.
+
+## Podstrony
+
+- [Start](https://wiktor-chess.netlify.app/): Strona główna z wizytówką i aktualnym rankingiem FIDE.
+- [Moja ścieżka](https://wiktor-chess.netlify.app/resume): Chronologiczna oś czasu turniejów szachowych (2019–2026).
+- [Rozgrywki](https://wiktor-chess.netlify.app/portfolio): Katalog turniejów szachowych ze zdjęciami, datami i wynikami.
+- [Kontakt](https://wiktor-chess.netlify.app/contacts): Formularz i dane kontaktowe.

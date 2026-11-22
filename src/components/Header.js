@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Avatar, Grid, Box } from "@material-ui/core";
 import Typed from "react-typed";
-import avatar from "../images/viki1.jpg";
+import avatar from "../images/viki1.avif"; // <-- dla najlepszego wyniku podmień na wersję .avif/.webp 480x480px (np. vik.avif)
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
@@ -10,31 +10,39 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(15),
     height: theme.spacing(15),
     margin: theme.spacing(1),
+    aspectRatio: "1 / 1",
+    flexShrink: 0,
   },
   title: {
     color: "tomato",
     letterSpacing: "0.8rem",
     fontWeight: "700",
     fontSize: "2.5rem",
-    // marginTop: "5rem",
+    lineHeight: 1.25,
+    minHeight: "6.5rem",
+    marginBottom: "1.5rem",
+    [theme.breakpoints.down("xs")]: {
+      minHeight: "9.5rem",
+    },
   },
   subtitle: {
     color: "white",
     marginBottom: "3rem",
     fontSize: "1.5rem",
+    lineHeight: 1.4,
+    minHeight: "4.5rem",
   },
   typedContainer: {
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "100vw",
+    width: "100%",
     height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
-    // zIndex: -10,
     marginTop: "8rem",
   },
 }));
@@ -44,12 +52,16 @@ const Header = () => {
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="avatar" />
+        <Avatar
+          className={classes.avatar}
+          src={avatar}
+          alt="Wiktor - szachista"
+          imgProps={{ width: 240, height: 240, decoding: "async" }}
+        />
       </Grid>
       <Typography className={classes.title} variant="h1">
         <Typed strings={["Szachy <br/> - moja pasja!"]} typeSpeed={40} />
       </Typography>
-      <br />
       <Typography className={classes.subtitle} variant="h2">
         <Typed
           strings={[

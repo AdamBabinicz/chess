@@ -85,11 +85,21 @@ const Navbar = () => {
       component="div"
       onClick={toggleSlider(slider, false)}
     >
-      <Avatar className={classes.avatar} src={avatar} alt="avatar" />
+      <Avatar
+        className={classes.avatar}
+        src={avatar}
+        alt="Awatar szachisty"
+        imgProps={{ width: 104, height: 104, loading: "lazy" }}
+      />
       <Divider />
       <List>
-        {menuItems.map((lsItem, key) => (
-          <ListItem button key={key} component={Link} to={lsItem.listPath}>
+        {menuItems.map((lsItem) => (
+          <ListItem
+            button
+            key={lsItem.listPath}
+            component={Link}
+            to={lsItem.listPath}
+          >
             <ListItemIcon className={classes.listItem}>
               {lsItem.listIcon}
             </ListItemIcon>
@@ -102,36 +112,38 @@ const Navbar = () => {
       </List>
     </Box>
   );
+
   return (
-    <>
-      <Box component="nav">
-        <AppBar
-          position="static"
-          style={{
-            background: "rgb(42, 42, 44)",
-            position: "fixed",
-            zIndex: "1",
-          }}
-        >
-          <Toolbar>
-            <IconButton onClick={toggleSlider("right", true)}>
-              <MoreHoriz style={{ color: "tomato" }} />
-            </IconButton>
-            <Typography variant="h5" style={{ color: "tan" }}>
-              Portfolio szachisty
-            </Typography>
-            <MobilRightMenuSlider
-              anchor="right"
-              open={state.right}
-              onClose={toggleSlider("right", false)}
-            >
-              {sideList("right")}
-              <Footer />
-            </MobilRightMenuSlider>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </>
+    <Box component="nav">
+      <AppBar
+        position="fixed"
+        style={{
+          background: "rgb(42, 42, 44)",
+          zIndex: 1,
+        }}
+      >
+        <Toolbar>
+          <IconButton
+            aria-label="Otwórz menu nawigacji"
+            aria-expanded={state.right}
+            onClick={toggleSlider("right", true)}
+          >
+            <MoreHoriz style={{ color: "tomato" }} aria-hidden="true" />
+          </IconButton>
+          <Typography variant="h5" style={{ color: "tan" }}>
+            Portfolio szachisty
+          </Typography>
+          <MobilRightMenuSlider
+            anchor="right"
+            open={state.right}
+            onClose={toggleSlider("right", false)}
+          >
+            {sideList("right")}
+            <Footer />
+          </MobilRightMenuSlider>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };
 
